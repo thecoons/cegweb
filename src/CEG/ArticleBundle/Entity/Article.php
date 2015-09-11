@@ -1,0 +1,204 @@
+<?php
+
+namespace CEG\ArticleBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Article
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="CEG\ArticleBundle\Entity\ArticleRepository")
+ */
+class Article
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="artcl_title", type="string", length=255)
+     */
+    private $artclTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="artcl_content", type="text")
+     */
+    private $artclContent;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="artcl_date", type="datetime")
+     */
+    private $artclDate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="artcl_like", type="integer")
+     */
+    private $artclLike;
+
+    /**
+    * @ORM\OneToMany(targetEntity="CEG\ArticleBundle\Entity\Image", mappedBy="article",cascade={"persist", "remove"})
+    */
+    private $images; // Notez le « s », une annonce est liée à plusieurs candidatures
+
+    /**
+    * @ORM\OneToMany(targetEntity="CEG\ArticleBundle\Entity\Image", mappedBy="article",cascade={"persist", "remove"})
+    */
+    private $files; // Notez le « s », une annonce est liée à plusieurs candidatures
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set artclTitle
+     *
+     * @param string $artclTitle
+     * @return Article
+     */
+    public function setArtclTitle($artclTitle)
+    {
+        $this->artclTitle = $artclTitle;
+
+        return $this;
+    }
+
+    /**
+     * Get artclTitle
+     *
+     * @return string
+     */
+    public function getArtclTitle()
+    {
+        return $this->artclTitle;
+    }
+
+    /**
+     * Set artclContent
+     *
+     * @param string $artclContent
+     * @return Article
+     */
+    public function setArtclContent($artclContent)
+    {
+        $this->artclContent = $artclContent;
+
+        return $this;
+    }
+
+    /**
+     * Get artclContent
+     *
+     * @return string
+     */
+    public function getArtclContent()
+    {
+        return $this->artclContent;
+    }
+
+    /**
+     * Set artclDate
+     *
+     * @param \DateTime $artclDate
+     * @return Article
+     */
+    public function setArtclDate($artclDate)
+    {
+        $this->artclDate = $artclDate;
+
+        return $this;
+    }
+
+    /**
+     * Get artclDate
+     *
+     * @return \DateTime
+     */
+    public function getArtclDate()
+    {
+        return $this->artclDate;
+    }
+
+    /**
+     * Set artclLike
+     *
+     * @param integer $artclLike
+     * @return Article
+     */
+    public function setArtclLike($artclLike)
+    {
+        $this->artclLike = $artclLike;
+
+        return $this;
+    }
+
+    /**
+     * Get artclLike
+     *
+     * @return integer
+     */
+    public function getArtclLike()
+    {
+        return $this->artclLike;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add images
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $images
+     * @return Article
+     */
+    public function addImage(\CEG\ArticleBundle\Entity\Image $images)
+    {
+        $this->images[] = $images;
+
+        return $this;
+    }
+
+    /**
+     * Remove images
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $images
+     */
+    public function removeImage(\CEG\ArticleBundle\Entity\Image $images)
+    {
+        $this->images->removeElement($images);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cegsymf",
+  "version": "0.1.0",
+  "authors": [
+    "Laurent Brunet <lbrunet@jolicode.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,1 @@
+[2015-09-11 21:16:19] assetic.ERROR: The template "CEGArticleBundle:Default:indexArticle.html.twig" contains an error: The function "dump" does not exist in "CEGArticleBundle:Default:indexArticle.html.twig" at line 65 [] []

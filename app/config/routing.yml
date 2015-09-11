@@ -1,0 +1,10 @@
+ceg_article:
+    resource: "@CEGArticleBundle/Resources/config/routing.yml"
+    prefix:   /article/
+
+ceg_application:
+    resource: "@CEGApplicationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

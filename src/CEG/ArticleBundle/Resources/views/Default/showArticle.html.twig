@@ -1,0 +1,43 @@
+{% extends "CEGApplicationBundle::baseLayout.html.twig" %}
+{% block body %}
+<section class="bg-primary">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h2 class="section-heading">{{article.artclTitle}}</h2>
+      <hr class="light">
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <p>{{ article.artclContent}}</p>
+        {% for image in article.images %}
+          {% if image.url != "jpeg" %}
+            <a href="/CEGweb/web/{{image.getUrlWay }}" class="btn btn-primary btn-xl">{{image.description | default('Fichier')}}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="no-padding bg-primary" id="portfolio">
+    <div class="container-fluid">
+      <br>
+      <div class="row no-gutter">
+        <div class="col-lg-12 col-sm-12">
+          <div id="articlePortfolio">
+            {% for image in article.images %}
+              {% if image.url == "jpeg" %}
+                <a href="/CEGweb/web/{{image.getUrlWay}}">
+                  <img alt="{{image.description | default('')}}" src="/CEGweb/web/{{image.getUrlWay }}" class="img-rounded">
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,70 @@
+{% extends "CEGApplicationBundle::baseLayout.html.twig" %}
+{% block body %}
+<section class="bg-primary">
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-lg-8  col-lg-offset-2 text-center">
+        <h2 class="section-heading">"Aux Dernières Nouvelles"</h2>
+        <hr class="light">
+        <p class="text-faded">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.!</p>
+        <hr class="light">
+      </div>
+    </div>
+      </div>
+</section>
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h2 class="section-heading">Index des Articles</h2>
+      <br>
+      <hr class="primary">
+      <br>
+    </div>
+  {% for article in articles %}
+  <div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+      <div class="media">
+  <div class="media-left">
+    <a href="{{ path('ceg_article_show',{'id':article.id})}}">
+      <img class="media-object" src="/CEGweb/web/{{article.images[0].getUrlWay | default('bundles/cegapplication/img/portfolio/2.jpg')}}" alt="...">
+    </a>
+    <br>
+      <a href="{{ path('ceg_article_delete',{'id':article.id})}}" class="btn btn-danger btn-xs">Supprimer</a>
+      <a href="{{ path('ceg_article_update',{'id':article.id})}}" class="btn btn-warning btn-xs pull-right">Mise à jour</a>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">{{article.artclTitle}}</h3>
+    <p class="text-right"><small>Posté le {{article.artclDate|date("m/d/y")}}</small></p>
+    {{article.artclContent}}
+    <br>
+    <p class="text-right"><small>Publier par TheCoon</small></p>
+  </div>
+</div>
+    </div>
+  </div>
+  {% if not loop.last %}
+  <br>
+  <hr class="primary">
+  <br>
+  {% endif %}
+  {% endfor %}
+
+</div>
+
+
+</section>
+<section class="bg-primary">
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-lg-8  col-lg-offset-2 text-center">
+        {{dump(articles[0].images[0].getUrlWay())}}
+      </div>
+    </div>
+
+</section>
+{% endblock body %}

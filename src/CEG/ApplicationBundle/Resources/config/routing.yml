@@ -1,0 +1,7 @@
+ceg_application_homepage:
+    path:     /
+    defaults: { _controller: CEGApplicationBundle:Default:index }
+
+get_user:
+    path:     /getUser
+    defaults: { _controller: CEGApplicationBundle:User:getUser }
