@@ -30,7 +30,7 @@
           <div id="articlePortfolio">
             {% for image in article.images %}
               {% if image.url == "jpeg" %}
-                <a href="{{web_path}}{{image.getUrlWay}}">
+                <a href="{{web_path}}/{{image.getUrlWay}}">
                   <img alt="{{image.description | default('')}}" src="/CEGweb/web/{{image.getUrlWay }}" class="img-rounded">
                 </a>
               {% endif %}
