@@ -138,7 +138,7 @@ public function getUrlWay()
 public function getUploadDir()
 {
   // On retourne le chemin relatif vers l'image pour un navigateur (relatif au répertoire /web donc)
-  return 'bundles/cegapplication/img';
+  return 'uploads';
 }
 protected function getUploadRootDir()
 {
@@ -235,7 +235,7 @@ public function getAlt()
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
