@@ -15,7 +15,7 @@
         <p>{{ article.artclContent}}</p>
         {% for image in article.images %}
           {% if image.url != "jpeg" %}
-            <a href="/CEGweb/web/{{image.getUrlWay }}" class="btn btn-primary btn-xl">{{image.description | default('Fichier')}}</a>
+            <a href="{{web_path}}/{{image.getUrlWay }}" class="btn btn-primary btn-xl">{{image.description | default('Fichier')}}</a>
           {% endif %}
         {% endfor %}
       </div>
