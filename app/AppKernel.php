@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new CEG\ApplicationBundle\CEGApplicationBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new CEG\ArticleBundle\CEGArticleBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

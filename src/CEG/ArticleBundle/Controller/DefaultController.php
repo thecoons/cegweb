@@ -13,80 +13,97 @@ use CEG\ArticleBundle\Form\ImageType;
 class DefaultController extends Controller
 {
 
-    public function indexArticleAction()
-    {
-      $em = $this->getDoctrine()->getManager();
-      $articles = $em->getRepository('CEGArticleBundle:Article')->findAll();
+  public function indexArticleAction()
+  {
+    $em = $this->getDoctrine()->getManager();
+    $articles = $em->getRepository('CEGArticleBundle:Article')->findAll();
 
-      if(!$articles){
-        throw $this->createNotFoundException('Aucun articles n\'a été trouvée . -__- "Damn it , bro!!!!"');
-      }
-
-      return $this->render('CEGArticleBundle:Default:indexArticle.html.twig', array('articles' =>$articles));
+    if(!$articles){
+      throw $this->createNotFoundException('Aucun articles n\'a été trouvée . -__- "Damn it , bro!!!!"');
     }
 
-    public function showArticleAction($id)
-    {
-      $em = $this->getDoctrine()->getManager();
-      $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
+    return $this->render('CEGArticleBundle:Default:indexArticle.html.twig', array('articles' =>$articles));
+  }
 
-      return $this->render('CEGArticleBundle:Default:showArticle.html.twig',array('article' => $article ));
-    }
+  public function listAction($page)
+  {
+    $em    = $this->get('doctrine.orm.entity_manager');
+    $dql   = "SELECT a FROM CEGArticleBundle:Article a ORDER BY a.id DESC";
+    $query = $em->createQuery($dql);
 
-    public function createArticleAction(Request $request){
-      $article = new Article();
-      $formBuilder = $this->createFormBuilder($article);
-      $form = $this->container->get('form.factory')->create(new ArticleType,$article);
-      if($form->handleRequest($request)->isValid())
-      {
-        $em = $this->getDoctrine()->getManager();
+    $paginator  = $this->get('knp_paginator');
+    $pagination = $paginator->paginate(
+    $query,
+    $page/*page number*/,
+    4/*limit per page*/
+  );
 
-        $article->setArtclDate(new \DateTime());
-        $article->setArtclLike(0);
+  // parameters to template
+  return $this->render('CEGArticleBundle:Default:indexArticle.html.twig', array('pagination' => $pagination));
+}
 
-        $em->persist($article);
-        $em->flush();
+public function showArticleAction($id)
+{
+  $em = $this->getDoctrine()->getManager();
+  $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
 
-        return $this->redirect($this->generateUrl('ceg_article_index'));
-      }
-      return $this->render('CEGArticleBundle:Default:createArticle.html.twig',array('form' => $form->createView() ));
-    }
+  return $this->render('CEGArticleBundle:Default:showArticle.html.twig',array('article' => $article ));
+}
 
-    public function updateArticleAction(Request $request, $id){
-      $image = new Image();
-      $formBuilder = $this->createFormBuilder($image);
-      $form = $this->container->get('form.factory')->create(new ImageType,$image);
-      if($form->handleRequest($request)->isValid())
-      {
-        $em = $this->getDoctrine()->getManager();
-        $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
-        $image->setArticle($article);
-        $em->persist($image);
-        $em->persist($article);
-        $em->flush();
+public function createArticleAction(Request $request){
+  $article = new Article();
+  $formBuilder = $this->createFormBuilder($article);
+  $form = $this->container->get('form.factory')->create(new ArticleType,$article);
+  if($form->handleRequest($request)->isValid())
+  {
+    $em = $this->getDoctrine()->getManager();
 
-        return $this->render('CEGArticleBundle:Default:checkArticle.html.twig',array('id'=>$id));
-      }
-    return $this->render('CEGArticleBundle:Default:updateArticle.html.twig',array('id'=>$id,'form' => $form->createView()));
-    }
+    $article->setArtclDate(new \DateTime());
+    $article->setArtclLike(0);
 
-    public function deleteImageAction($id){
-      $em = $this->getDoctrine()->getManager();
-      $image = $em->getRepository('CEGArticleBundle:Image')->find($id);
-      $articleId = $image->getArticle()->getId();
-      $em->remove($image);
-      $em->flush();
-      return $this->redirect($this->generateUrl('ceg_article_show',array('id' => $articleId)));
-    }
+    $em->persist($article);
+    $em->flush();
+
+    return $this->redirect($this->generateUrl('ceg_article_index'));
+  }
+  return $this->render('CEGArticleBundle:Default:createArticle.html.twig',array('form' => $form->createView() ));
+}
+
+public function updateArticleAction(Request $request, $id){
+  $image = new Image();
+  $formBuilder = $this->createFormBuilder($image);
+  $form = $this->container->get('form.factory')->create(new ImageType,$image);
+  if($form->handleRequest($request)->isValid())
+  {
+    $em = $this->getDoctrine()->getManager();
+    $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
+    $image->setArticle($article);
+    $em->persist($image);
+    $em->persist($article);
+    $em->flush();
+
+    return $this->render('CEGArticleBundle:Default:checkArticle.html.twig',array('id'=>$id));
+  }
+  return $this->render('CEGArticleBundle:Default:updateArticle.html.twig',array('id'=>$id,'form' => $form->createView()));
+}
+
+public function deleteImageAction($id){
+  $em = $this->getDoctrine()->getManager();
+  $image = $em->getRepository('CEGArticleBundle:Image')->find($id);
+  $articleId = $image->getArticle()->getId();
+  $em->remove($image);
+  $em->flush();
+  return $this->redirect($this->generateUrl('ceg_article_show',array('id' => $articleId)));
+}
 
 
-    public function deleteArticleAction($id){
-      $em = $this->getDoctrine()->getManager();
-      $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
+public function deleteArticleAction($id){
+  $em = $this->getDoctrine()->getManager();
+  $article = $em->getRepository('CEGArticleBundle:Article')->find($id);
 
-      $em->remove($article);
-      $em->flush();
+  $em->remove($article);
+  $em->flush();
 
-      return $this->redirect($this->generateUrl('ceg_article_index'));
-    }
+  return $this->redirect($this->generateUrl('ceg_article_index'));
+}
 }
