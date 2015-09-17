@@ -29,7 +29,7 @@
       <div class="media">
   <div class="media-left">
     <a href="{{ path('ceg_article_show',{'id':article.id})}}">
-      <img class="media-object" src="{{web_path}}/{{article.images[0].getUrlWay | default('/bundles/cegapplication/img/portfolio/2.jpg')}}" alt="...">
+      <img class="media-object" src="{{web_path}}/{{article.getHeaderArticle().getUrlWay() | default('/bundles/cegapplication/img/portfolio/2.jpg')}}" alt="...">
     </a>
     <br>
       <a href="{{ path('ceg_article_delete',{'id':article.id})}}" class="btn btn-danger btn-xs">Supprimer</a>

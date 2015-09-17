@@ -60,6 +60,16 @@ class Article
     private $files; // Notez le « s », une annonce est liée à plusieurs candidatures
 
 
+    public function getHeaderArticle()
+    {
+      $imgs = $this->getImages();
+      foreach($imgs as $img){
+        if($img->getUrl() == "jpeg"){
+          return $img;
+        }
+      }
+    }
+
     /**
      * Get id
      *
