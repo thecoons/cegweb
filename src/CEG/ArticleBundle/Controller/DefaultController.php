@@ -13,7 +13,7 @@ use CEG\ArticleBundle\Form\ImageType;
 class DefaultController extends Controller
 {
 
-  
+
 
   public function listAction($page)
   {
@@ -94,6 +94,6 @@ public function deleteArticleAction($id){
   $em->remove($article);
   $em->flush();
 
-  return $this->redirect($this->generateUrl('ceg_article_index'));
+  return $this->redirect($this->generateUrl('ceg_article_list'));
 }
 }
