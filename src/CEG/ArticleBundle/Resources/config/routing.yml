@@ -25,3 +25,7 @@ ceg_article_check:
 ceg_image_delete:
     path: /deleteFile/{id}
     defaults: { _controller: CEGArticleBundle:Default:deleteImage }
+
+ceg_image_list:
+    path: /list/{page}
+    defaults: {_controller: CEGArticleBundle:Default:list }
