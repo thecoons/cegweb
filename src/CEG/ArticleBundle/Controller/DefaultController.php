@@ -13,17 +13,7 @@ use CEG\ArticleBundle\Form\ImageType;
 class DefaultController extends Controller
 {
 
-  public function indexArticleAction()
-  {
-    $em = $this->getDoctrine()->getManager();
-    $articles = $em->getRepository('CEGArticleBundle:Article')->findAll();
-
-    if(!$articles){
-      throw $this->createNotFoundException('Aucun articles n\'a été trouvée . -__- "Damn it , bro!!!!"');
-    }
-
-    return $this->render('CEGArticleBundle:Default:indexArticle.html.twig', array('articles' =>$articles));
-  }
+  
 
   public function listAction($page)
   {

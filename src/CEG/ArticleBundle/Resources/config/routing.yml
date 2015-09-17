@@ -2,10 +2,6 @@ ceg_article_create:
     path: /create/
     defaults: { _controller: CEGArticleBundle:Default:createArticle }
 
-ceg_article_index:
-    path: /index/
-    defaults: { _controller: CEGArticleBundle:Default:indexArticle }
-
 ceg_article_show:
     path: /show/{id}
     defaults: { _controller: CEGArticleBundle:Default:showArticle }
@@ -22,10 +18,10 @@ ceg_article_check:
     path: /check/{id}/{check}
     defaults: { _controller: CEGArticleBundle:Default:checkArticle }
 
+ceg_article_list:
+    path: /list/{page}
+    defaults: {_controller: CEGArticleBundle:Default:list }
+
 ceg_image_delete:
     path: /deleteFile/{id}
     defaults: { _controller: CEGArticleBundle:Default:deleteImage }
-
-ceg_image_list:
-    path: /list/{page}
-    defaults: {_controller: CEGArticleBundle:Default:list }
