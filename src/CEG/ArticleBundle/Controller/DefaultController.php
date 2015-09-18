@@ -54,7 +54,7 @@ public function createArticleAction(Request $request){
     $em->persist($article);
     $em->flush();
 
-    return $this->redirect($this->generateUrl('ceg_article_list',{'page':1}));
+    return $this->redirect($this->generateUrl('ceg_article_list', array('page'=>1)));
   }
   return $this->render('CEGArticleBundle:Default:createArticle.html.twig',array('form' => $form->createView() ));
 }
