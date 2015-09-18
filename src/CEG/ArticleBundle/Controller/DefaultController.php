@@ -94,6 +94,6 @@ public function deleteArticleAction($id){
   $em->remove($article);
   $em->flush();
 
-  return $this->redirect($this->generateUrl('ceg_article_list'));
+  return $this->redirect($this->generateUrl('ceg_article_list',array('page'=>1)));
 }
 }
