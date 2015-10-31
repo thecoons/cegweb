@@ -10,4 +10,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
-    web_path: /thecoonslab.com/current/web
+    web_path: /CEGweb/web

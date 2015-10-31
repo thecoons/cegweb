@@ -5,3 +5,7 @@ ceg_application_homepage:
 get_user:
     path:     /getUser
     defaults: { _controller: CEGApplicationBundle:User:getUser }
+
+ceg_application_test:
+    path: /test
+    defaults: { _controller: CEGApplicationBundle:Default:testIndex }

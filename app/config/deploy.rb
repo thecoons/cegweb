@@ -22,9 +22,9 @@ set :keep_releases, 3 # Le nombre de releases à garder après un déploiement r
 
 ## Symfony2
 set :shared_files, ["app/config/parameters.yml"] # Les fichiers à conserver entre chaque déploiement
-set :shared_children, [app_path + "/logs", "vendor"] # Idem, mais pour les dossiers
+set :shared_children, [app_path + "/logs",web_path + "/uploads", "vendor"] # Idem, mais pour les dossiers
 set :use_composer, true
-set :update_vendors, false # Il est conseillé de laisser a false et de ne pas faire de ‘composer update’ directement sur la prod
+set :update_vendors, true # Il est conseillé de laisser a false et de ne pas faire de ‘composer update’ directement sur la prod
 #set :composer_options, "--verbose --prefer-dist" # Permet de spécifier des paramètres supplémentaires à composer, inutile dans notre cas
 set :writable_dirs, ["app/cache", "app/logs"] # Application des droits nécessaires en écriture sur les dossiers
 set :webserver_user, "www-data" # L’utilisateur de votre serveur web (Apache, nginx, etc.)
@@ -35,16 +35,16 @@ set :dump_assetic_assets, true # dumper les assets
 #default_run_options[:pty] = true # Si vous avez cette erreur : no tty present and no askpass program specified, alors décommentez
 #ssh_options[:forward_agent] = true # Idem que ci-dessus
 
-# Permet d’avoir le détail des logs de capistrano, plus facile à débugger si vous rencontrer des erreurs
-IMPORTANT = 0
-
-INFO = 1
-
-DEBUG = 2
-
-TRACE = 3
-
-MAX_LEVEL = 3
+# # Permet d’avoir le détail des logs de capistrano, plus facile à débugger si vous rencontrer des erreurs
+# IMPORTANT = 0
+#
+# INFO = 1
+#
+# DEBUG = 2
+#
+# TRACE = 3
+#
+# MAX_LEVEL = 3
 
 logger.level = Logger::MAX_LEVEL
 
@@ -55,6 +55,16 @@ run "sudo chmod -R 777 #{latest_release}/#{cache_path}"
 run "sudo chmod -R 777 #{latest_release}/#{log_path}"
 end
 
+# task :upload_parameters do
+#   origin_file = "app/config/prodParameters.yml"
+#   destination_file = latest_release + "/app/config/parameters.yml" # Notice the
+#   latest_release
+#
+#   try_sudo "mkdir -p #{File.dirname(destination_file)}"
+#   top.upload(origin_file, destination_file)
+# end
+#
+# before "deploy:share_childs", "upload_parameters"
 
 # set :application, "CEGwebSite"
 # set :domain,      "thecoon@thecoonslab.com"

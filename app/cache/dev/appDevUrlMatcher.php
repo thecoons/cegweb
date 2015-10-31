@@ -137,15 +137,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::createArticleAction',  '_route' => 'ceg_article_create',);
             }
 
-            // ceg_article_index
-            if (rtrim($pathinfo, '/') === '/article/index') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'ceg_article_index');
-                }
-
-                return array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::indexArticleAction',  '_route' => 'ceg_article_index',);
-            }
-
             // ceg_article_show
             if (0 === strpos($pathinfo, '/article/show') && preg_match('#^/article/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ceg_article_show')), array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::showArticleAction',));
@@ -164,6 +155,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // ceg_article_check
             if (0 === strpos($pathinfo, '/article/check') && preg_match('#^/article/check/(?P<id>[^/]++)/(?P<check>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ceg_article_check')), array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::checkArticleAction',));
+            }
+
+            // ceg_article_list
+            if (0 === strpos($pathinfo, '/article/list') && preg_match('#^/article/list/(?P<page>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ceg_article_list')), array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::listAction',));
             }
 
             // ceg_image_delete
@@ -185,6 +181,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // get_user
         if ($pathinfo === '/getUser') {
             return array (  '_controller' => 'CEG\\ApplicationBundle\\Controller\\UserController::getUserAction',  '_route' => 'get_user',);
+        }
+
+        // ceg_application_test
+        if ($pathinfo === '/test') {
+            return array (  '_controller' => 'CEG\\ApplicationBundle\\Controller\\DefaultController::testIndexAction',  '_route' => 'ceg_application_test',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {
