@@ -16,8 +16,8 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dddc934edb32b0ed40ab11ad4bf1ced7a93f636bddbf4b60fd27987a13a3fe78 = $this->env->getExtension("native_profiler");
-        $__internal_dddc934edb32b0ed40ab11ad4bf1ced7a93f636bddbf4b60fd27987a13a3fe78->enter($__internal_dddc934edb32b0ed40ab11ad4bf1ced7a93f636bddbf4b60fd27987a13a3fe78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
+        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485 = $this->env->getExtension("native_profiler");
+        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485->enter($__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -39,11 +39,11 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
         echo "/bundles/cegapplication/css/style.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen,projection\"/>
 </head>
 <body>
-  <nav class=\"white\" role=\"navigation\">
+  <nav class=\"blue\" role=\"navigation\">
     <div class=\"nav-wrapper container\">
-      <a id=\"logo-container\" href=\"#\" class=\"brand-logo\">Logo</a>
+      <a id=\"logo-container\" href=\"#\" class=\"white-text brand-logo\">CEPG</a>
       <ul class=\"right hide-on-med-and-down\">
-        <li><a href=\"#\">Navbar Link</a></li>
+        <li><a class=\"white-text\"href=\"#\">Navbar Link</a></li>
       </ul>
 
       <ul id=\"nav-mobile\" class=\"side-nav\">
@@ -73,18 +73,18 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 </html>
 ";
         
-        $__internal_dddc934edb32b0ed40ab11ad4bf1ced7a93f636bddbf4b60fd27987a13a3fe78->leave($__internal_dddc934edb32b0ed40ab11ad4bf1ced7a93f636bddbf4b60fd27987a13a3fe78_prof);
+        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485->leave($__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485_prof);
 
     }
 
     // line 28
     public function block_body($context, array $blocks = array())
     {
-        $__internal_50539c9ac28ebc5ce7acdcae99c1a49c7639c078304ea523813c6c936c06398a = $this->env->getExtension("native_profiler");
-        $__internal_50539c9ac28ebc5ce7acdcae99c1a49c7639c078304ea523813c6c936c06398a->enter($__internal_50539c9ac28ebc5ce7acdcae99c1a49c7639c078304ea523813c6c936c06398a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650 = $this->env->getExtension("native_profiler");
+        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650->enter($__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_50539c9ac28ebc5ce7acdcae99c1a49c7639c078304ea523813c6c936c06398a->leave($__internal_50539c9ac28ebc5ce7acdcae99c1a49c7639c078304ea523813c6c936c06398a_prof);
+        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650->leave($__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650_prof);
 
     }
 
@@ -116,11 +116,11 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 /*   <link href="{{web_path}}/bundles/cegapplication/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>*/
 /* </head>*/
 /* <body>*/
-/*   <nav class="white" role="navigation">*/
+/*   <nav class="blue" role="navigation">*/
 /*     <div class="nav-wrapper container">*/
-/*       <a id="logo-container" href="#" class="brand-logo">Logo</a>*/
+/*       <a id="logo-container" href="#" class="white-text brand-logo">CEPG</a>*/
 /*       <ul class="right hide-on-med-and-down">*/
-/*         <li><a href="#">Navbar Link</a></li>*/
+/*         <li><a class="white-text"href="#">Navbar Link</a></li>*/
 /*       </ul>*/
 /* */
 /*       <ul id="nav-mobile" class="side-nav">*/
