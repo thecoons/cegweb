@@ -1,15 +1,19 @@
 {% extends "CEGApplicationBundle::baseLayout.html.twig" %}
-{% block content %}
+{% block body %}
+<div class="container">
+  <div class="section">
 <div class="row">
-  <div class="col-lg-8 col-lg-offset-2 text-center">
-    <h3 classe="bg-sucess">Votre fichier a bien été enregistré.</h3>
+  <div class="col s12 center">
+    <h3 classe="header">Votre fichier a bien été enregistré.</h3>
   </div>
 </div>
 <hr class="light">
 <div class="row">
-  <div class="col-lg-8 col-lg-offset-2 text-center">
-<a href="{{ path('ceg_article_list',{'page':1})}}" class="btn btn-default pull-left">Index Article</a>
-<a href="{{ path('ceg_article_update',{'id':id})}}" class="btn btn-warning pull-right">Continuer</a>
+  <div class="col s12">
+<a href="{{ path('ceg_article_list',{'page':1})}}" class="btn blue left">Index Article</a>
+<a href="{{ path('ceg_article_update',{'id':id})}}" class="btn orange right">Continuer</a>
   </div>
 </div>
-{% endblock content %}
+</div>
+</div>
+{% endblock body %}

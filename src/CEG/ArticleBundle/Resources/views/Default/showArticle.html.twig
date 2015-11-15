@@ -1,43 +1,51 @@
 {% extends "CEGApplicationBundle::baseLayout.html.twig" %}
 {% block body %}
-<section class="bg-primary">
+<div class="container">
+<section>
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 text-center">
-      <h2 class="section-heading">{{article.artclTitle}}</h2>
-      <hr class="light">
+    <div class="col s12 center">
+      <h2 class="section-heading blue-text text-darken-2">{{article.artclTitle}}</h2>
+      <div class="divider"></div>
+
     </div>
   </div>
 </section>
 <section>
+</div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
+      <div class="col s12 center">
         <p>{{ article.artclContent}}</p>
+        <div class="divider"></div>
+        <br>
         {% for image in article.images %}
           {% if image.url != "jpeg" %}
-            <a href="{{web_path}}/{{image.getUrlWay }}" class="btn btn-primary btn-xl">{{image.description | default('Fichier')}}</a>
+            <a href="{{web_path}}/{{image.getUrlWay }}" class="btn orange darken-3">{{image.description | default('Fichier')}}</a>
           {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
-<section class="no-padding bg-primary" id="portfolio">
-    <div class="container-fluid">
+<section>
+    <div class="container">
       <br>
-      <div class="row no-gutter">
-        <div class="col-lg-12 col-sm-12">
-          <div id="articlePortfolio">
+      <div class="row">
             {% for image in article.images %}
               {% if image.url == "jpeg" %}
-                <a href="{{web_path}}/{{image.getUrlWay}}">
-                  <img alt="{{image.description | default('')}}" src="{{web_path}}/{{image.getUrlWay }}" class="img-rounded">
-                </a>
+        <div class="col s12 l6">
+                  <img alt="{{image.description | default('')}}" src="{{web_path}}/{{image.getUrlWay }}"width="400" class="materialboxed" data-caption="{{image.description | default('')}}">
+            <br>
+        </div>
               {% endif %}
             {% endfor %}
-          </div>
-        </div>
       </div>
     </div>
 </section>
+<<script type="text/javascript">
+
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>
 {% endblock body %}

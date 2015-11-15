@@ -16,8 +16,8 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485 = $this->env->getExtension("native_profiler");
-        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485->enter($__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
+        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9 = $this->env->getExtension("native_profiler");
+        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9->enter($__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -43,11 +43,11 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
     <div class=\"nav-wrapper container\">
       <a id=\"logo-container\" href=\"#\" class=\"white-text brand-logo\">CEPG</a>
       <ul class=\"right hide-on-med-and-down\">
-        <li><a class=\"white-text\"href=\"#\">Navbar Link</a></li>
+        <li><a class=\"white-text\"href=\"#\">Connexion<i class=\"material-icons right\">perm_identity</i></a></li>
       </ul>
 
       <ul id=\"nav-mobile\" class=\"side-nav\">
-        <li><a href=\"#\">Navbar Link</a></li>
+        <li><a href=\"#\">Connexion </a></li>
       </ul>
       <a href=\"#\" data-activates=\"nav-mobile\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>
     </div>
@@ -73,18 +73,18 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 </html>
 ";
         
-        $__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485->leave($__internal_c05e9b2300b3671d814a763ddd1a31fbf40e2c4964fbf725904b2bf94c72e485_prof);
+        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9->leave($__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9_prof);
 
     }
 
     // line 28
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650 = $this->env->getExtension("native_profiler");
-        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650->enter($__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386 = $this->env->getExtension("native_profiler");
+        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386->enter($__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650->leave($__internal_7c752b548686c63b49b7653b12ae04e2cdea58cb0b04d6fc318e68ffac76c650_prof);
+        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386->leave($__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386_prof);
 
     }
 
@@ -120,11 +120,11 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 /*     <div class="nav-wrapper container">*/
 /*       <a id="logo-container" href="#" class="white-text brand-logo">CEPG</a>*/
 /*       <ul class="right hide-on-med-and-down">*/
-/*         <li><a class="white-text"href="#">Navbar Link</a></li>*/
+/*         <li><a class="white-text"href="#">Connexion<i class="material-icons right">perm_identity</i></a></li>*/
 /*       </ul>*/
 /* */
 /*       <ul id="nav-mobile" class="side-nav">*/
-/*         <li><a href="#">Navbar Link</a></li>*/
+/*         <li><a href="#">Connexion </a></li>*/
 /*       </ul>*/
 /*       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>*/
 /*     </div>*/

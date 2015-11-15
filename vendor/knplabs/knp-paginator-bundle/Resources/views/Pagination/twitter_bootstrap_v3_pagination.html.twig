@@ -15,28 +15,28 @@
 #}
 
 {% if pageCount > 1 %}
-    <ul class="pagination">
+    <ul class="pagination center">
 
     {% if previous is defined %}
-        <li>
-            <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&laquo;&nbsp;{{ 'Previous'|trans }}</a>
-        </li>
+        <li class="waves-effect">
+            <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}"><i class="material-icons">chevron_left</i></a>
+        </li class="waves-effect">
     {% else %}
-        <li class="disabled">
-            <span>&laquo;&nbsp;{{ 'Previous'|trans }}</span>
+        <li class="disabled grey-text test-lighten-2">
+            <i class="material-icons">chevron_left</i>
         </li>
     {% endif %}
 
     {% if startPage > 1 %}
-        <li>
+        <li class="waves-effect">
             <a href="{{ path(route, query|merge({(pageParameterName): 1})) }}">1</a>
         </li>
         {% if startPage == 3 %}
-            <li>
-                <a href="{{ path(route, query|merge({(pageParameterName): 2})) }}">2</a>
+            <li class="waves-effect">
+                <a class="waves-effect" href="{{ path(route, query|merge({(pageParameterName): 2})) }}">2</a>
             </li>
         {% elseif startPage != 2 %}
-        <li class="disabled">
+        <li class="disabled grey-text test-lighten-2">
             <span>&hellip;</span>
         </li>
         {% endif %}
@@ -44,11 +44,11 @@
 
     {% for page in pagesInRange %}
         {% if page != current %}
-            <li>
+            <li class="waves-effect">
                 <a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a>
             </li>
         {% else %}
-            <li class="active">
+            <li class="active orange lighten-2">
                 <span>{{ page }}</span>
             </li>
         {% endif %}
@@ -58,27 +58,27 @@
     {% if pageCount > endPage %}
         {% if pageCount > (endPage + 1) %}
             {% if pageCount > (endPage + 2) %}
-                <li class="disabled">
+                <li class="disabled grey-text test-lighten-2">
                     <span>&hellip;</span>
                 </li>
             {% else %}
-                <li>
+                <li class="waves-effect">
                     <a href="{{ path(route, query|merge({(pageParameterName): (pageCount - 1)})) }}">{{ pageCount -1 }}</a>
                 </li>
             {% endif %}
         {% endif %}
-        <li>
+        <li class="waves-effect">
             <a href="{{ path(route, query|merge({(pageParameterName): pageCount})) }}">{{ pageCount }}</a>
         </li>
     {% endif %}
 
     {% if next is defined %}
-        <li>
-            <a href="{{ path(route, query|merge({(pageParameterName): next})) }}">{{ 'Next'|trans }}&nbsp;&raquo;</a>
+        <li class="waves-effect">
+            <a href="{{ path(route, query|merge({(pageParameterName): next})) }}"><i class="material-icons">chevron_right</i></a>
         </li>
     {% else %}
-        <li class="disabled">
-            <span>{{ 'Next'|trans }}&nbsp;&raquo;</span>
+        <li class="disabled grey-text test-lighten-2">
+            <i class="material-icons">chevron_right</i>
         </li>
     {% endif %}
     </ul>

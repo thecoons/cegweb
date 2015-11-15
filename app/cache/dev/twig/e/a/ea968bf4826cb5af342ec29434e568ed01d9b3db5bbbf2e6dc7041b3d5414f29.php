@@ -15,8 +15,8 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a4bba3c53f4b35e7d7893217eb4cf54dcce23413436089b508156dfbbfa014e9 = $this->env->getExtension("native_profiler");
-        $__internal_a4bba3c53f4b35e7d7893217eb4cf54dcce23413436089b508156dfbbfa014e9->enter($__internal_a4bba3c53f4b35e7d7893217eb4cf54dcce23413436089b508156dfbbfa014e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig"));
+        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f = $this->env->getExtension("native_profiler");
+        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f->enter($__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig"));
 
         // line 16
         echo "
@@ -24,28 +24,23 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
         // line 17
         if (((isset($context["pageCount"]) ? $context["pageCount"] : $this->getContext($context, "pageCount")) > 1)) {
             // line 18
-            echo "    <ul class=\"pagination\">
+            echo "    <ul class=\"pagination center\">
 
     ";
             // line 20
             if (array_key_exists("previous", $context)) {
                 // line 21
-                echo "        <li>
+                echo "        <li class=\"waves-effect\">
             <a href=\"";
                 // line 22
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => (isset($context["previous"]) ? $context["previous"] : $this->getContext($context, "previous"))))), "html", null, true);
-                echo "\">&laquo;&nbsp;";
-                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Previous"), "html", null, true);
-                echo "</a>
-        </li>
+                echo "\"><i class=\"material-icons\">chevron_left</i></a>
+        </li class=\"waves-effect\">
     ";
             } else {
                 // line 25
-                echo "        <li class=\"disabled\">
-            <span>&laquo;&nbsp;";
-                // line 26
-                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Previous"), "html", null, true);
-                echo "</span>
+                echo "        <li class=\"disabled grey-text test-lighten-2\">
+            <i class=\"material-icons\">chevron_left</i>
         </li>
     ";
             }
@@ -55,7 +50,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
             // line 30
             if (((isset($context["startPage"]) ? $context["startPage"] : $this->getContext($context, "startPage")) > 1)) {
                 // line 31
-                echo "        <li>
+                echo "        <li class=\"waves-effect\">
             <a href=\"";
                 // line 32
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => 1))), "html", null, true);
@@ -65,8 +60,8 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
                 // line 34
                 if (((isset($context["startPage"]) ? $context["startPage"] : $this->getContext($context, "startPage")) == 3)) {
                     // line 35
-                    echo "            <li>
-                <a href=\"";
+                    echo "            <li class=\"waves-effect\">
+                <a class=\"waves-effect\" href=\"";
                     // line 36
                     echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => 2))), "html", null, true);
                     echo "\">2</a>
@@ -75,7 +70,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
                 } elseif ((                // line 38
 (isset($context["startPage"]) ? $context["startPage"] : $this->getContext($context, "startPage")) != 2)) {
                     // line 39
-                    echo "        <li class=\"disabled\">
+                    echo "        <li class=\"disabled grey-text test-lighten-2\">
             <span>&hellip;</span>
         </li>
         ";
@@ -94,7 +89,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
                 echo "        ";
                 if (($context["page"] != (isset($context["current"]) ? $context["current"] : $this->getContext($context, "current")))) {
                     // line 47
-                    echo "            <li>
+                    echo "            <li class=\"waves-effect\">
                 <a href=\"";
                     // line 48
                     echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => $context["page"]))), "html", null, true);
@@ -105,7 +100,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
         ";
                 } else {
                     // line 51
-                    echo "            <li class=\"active\">
+                    echo "            <li class=\"active orange lighten-2\">
                 <span>";
                     // line 52
                     echo twig_escape_filter($this->env, $context["page"], "html", null, true);
@@ -132,13 +127,13 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
                     echo "            ";
                     if (((isset($context["pageCount"]) ? $context["pageCount"] : $this->getContext($context, "pageCount")) > ((isset($context["endPage"]) ? $context["endPage"] : $this->getContext($context, "endPage")) + 2))) {
                         // line 61
-                        echo "                <li class=\"disabled\">
+                        echo "                <li class=\"disabled grey-text test-lighten-2\">
                     <span>&hellip;</span>
                 </li>
             ";
                     } else {
                         // line 65
-                        echo "                <li>
+                        echo "                <li class=\"waves-effect\">
                     <a href=\"";
                         // line 66
                         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => ((isset($context["pageCount"]) ? $context["pageCount"] : $this->getContext($context, "pageCount")) - 1)))), "html", null, true);
@@ -152,7 +147,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
                     echo "        ";
                 }
                 // line 70
-                echo "        <li>
+                echo "        <li class=\"waves-effect\">
             <a href=\"";
                 // line 71
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => (isset($context["pageCount"]) ? $context["pageCount"] : $this->getContext($context, "pageCount"))))), "html", null, true);
@@ -168,22 +163,17 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
             // line 75
             if (array_key_exists("next", $context)) {
                 // line 76
-                echo "        <li>
+                echo "        <li class=\"waves-effect\">
             <a href=\"";
                 // line 77
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath((isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")), twig_array_merge((isset($context["query"]) ? $context["query"] : $this->getContext($context, "query")), array((isset($context["pageParameterName"]) ? $context["pageParameterName"] : $this->getContext($context, "pageParameterName")) => (isset($context["next"]) ? $context["next"] : $this->getContext($context, "next"))))), "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Next"), "html", null, true);
-                echo "&nbsp;&raquo;</a>
+                echo "\"><i class=\"material-icons\">chevron_right</i></a>
         </li>
     ";
             } else {
                 // line 80
-                echo "        <li class=\"disabled\">
-            <span>";
-                // line 81
-                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Next"), "html", null, true);
-                echo "&nbsp;&raquo;</span>
+                echo "        <li class=\"disabled grey-text test-lighten-2\">
+            <i class=\"material-icons\">chevron_right</i>
         </li>
     ";
             }
@@ -192,7 +182,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 ";
         }
         
-        $__internal_a4bba3c53f4b35e7d7893217eb4cf54dcce23413436089b508156dfbbfa014e9->leave($__internal_a4bba3c53f4b35e7d7893217eb4cf54dcce23413436089b508156dfbbfa014e9_prof);
+        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f->leave($__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f_prof);
 
     }
 
@@ -208,7 +198,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 
     public function getDebugInfo()
     {
-        return array (  191 => 84,  185 => 81,  182 => 80,  174 => 77,  171 => 76,  169 => 75,  166 => 74,  158 => 71,  155 => 70,  152 => 69,  144 => 66,  141 => 65,  135 => 61,  132 => 60,  129 => 59,  127 => 58,  124 => 57,  117 => 55,  111 => 52,  108 => 51,  100 => 48,  97 => 47,  94 => 46,  90 => 45,  87 => 44,  84 => 43,  78 => 39,  76 => 38,  71 => 36,  68 => 35,  66 => 34,  61 => 32,  58 => 31,  56 => 30,  53 => 29,  47 => 26,  44 => 25,  36 => 22,  33 => 21,  31 => 20,  27 => 18,  25 => 17,  22 => 16,);
+        return array (  181 => 84,  175 => 80,  169 => 77,  166 => 76,  164 => 75,  161 => 74,  153 => 71,  150 => 70,  147 => 69,  139 => 66,  136 => 65,  130 => 61,  127 => 60,  124 => 59,  122 => 58,  119 => 57,  112 => 55,  106 => 52,  103 => 51,  95 => 48,  92 => 47,  89 => 46,  85 => 45,  82 => 44,  79 => 43,  73 => 39,  71 => 38,  66 => 36,  63 => 35,  61 => 34,  56 => 32,  53 => 31,  51 => 30,  48 => 29,  42 => 25,  36 => 22,  33 => 21,  31 => 20,  27 => 18,  25 => 17,  22 => 16,);
     }
 }
 /* {#*/
@@ -228,28 +218,28 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 /* #}*/
 /* */
 /* {% if pageCount > 1 %}*/
-/*     <ul class="pagination">*/
+/*     <ul class="pagination center">*/
 /* */
 /*     {% if previous is defined %}*/
-/*         <li>*/
-/*             <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&laquo;&nbsp;{{ 'Previous'|trans }}</a>*/
-/*         </li>*/
+/*         <li class="waves-effect">*/
+/*             <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}"><i class="material-icons">chevron_left</i></a>*/
+/*         </li class="waves-effect">*/
 /*     {% else %}*/
-/*         <li class="disabled">*/
-/*             <span>&laquo;&nbsp;{{ 'Previous'|trans }}</span>*/
+/*         <li class="disabled grey-text test-lighten-2">*/
+/*             <i class="material-icons">chevron_left</i>*/
 /*         </li>*/
 /*     {% endif %}*/
 /* */
 /*     {% if startPage > 1 %}*/
-/*         <li>*/
+/*         <li class="waves-effect">*/
 /*             <a href="{{ path(route, query|merge({(pageParameterName): 1})) }}">1</a>*/
 /*         </li>*/
 /*         {% if startPage == 3 %}*/
-/*             <li>*/
-/*                 <a href="{{ path(route, query|merge({(pageParameterName): 2})) }}">2</a>*/
+/*             <li class="waves-effect">*/
+/*                 <a class="waves-effect" href="{{ path(route, query|merge({(pageParameterName): 2})) }}">2</a>*/
 /*             </li>*/
 /*         {% elseif startPage != 2 %}*/
-/*         <li class="disabled">*/
+/*         <li class="disabled grey-text test-lighten-2">*/
 /*             <span>&hellip;</span>*/
 /*         </li>*/
 /*         {% endif %}*/
@@ -257,11 +247,11 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 /* */
 /*     {% for page in pagesInRange %}*/
 /*         {% if page != current %}*/
-/*             <li>*/
+/*             <li class="waves-effect">*/
 /*                 <a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a>*/
 /*             </li>*/
 /*         {% else %}*/
-/*             <li class="active">*/
+/*             <li class="active orange lighten-2">*/
 /*                 <span>{{ page }}</span>*/
 /*             </li>*/
 /*         {% endif %}*/
@@ -271,27 +261,27 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 /*     {% if pageCount > endPage %}*/
 /*         {% if pageCount > (endPage + 1) %}*/
 /*             {% if pageCount > (endPage + 2) %}*/
-/*                 <li class="disabled">*/
+/*                 <li class="disabled grey-text test-lighten-2">*/
 /*                     <span>&hellip;</span>*/
 /*                 </li>*/
 /*             {% else %}*/
-/*                 <li>*/
+/*                 <li class="waves-effect">*/
 /*                     <a href="{{ path(route, query|merge({(pageParameterName): (pageCount - 1)})) }}">{{ pageCount -1 }}</a>*/
 /*                 </li>*/
 /*             {% endif %}*/
 /*         {% endif %}*/
-/*         <li>*/
+/*         <li class="waves-effect">*/
 /*             <a href="{{ path(route, query|merge({(pageParameterName): pageCount})) }}">{{ pageCount }}</a>*/
 /*         </li>*/
 /*     {% endif %}*/
 /* */
 /*     {% if next is defined %}*/
-/*         <li>*/
-/*             <a href="{{ path(route, query|merge({(pageParameterName): next})) }}">{{ 'Next'|trans }}&nbsp;&raquo;</a>*/
+/*         <li class="waves-effect">*/
+/*             <a href="{{ path(route, query|merge({(pageParameterName): next})) }}"><i class="material-icons">chevron_right</i></a>*/
 /*         </li>*/
 /*     {% else %}*/
-/*         <li class="disabled">*/
-/*             <span>{{ 'Next'|trans }}&nbsp;&raquo;</span>*/
+/*         <li class="disabled grey-text test-lighten-2">*/
+/*             <i class="material-icons">chevron_right</i>*/
 /*         </li>*/
 /*     {% endif %}*/
 /*     </ul>*/
