@@ -15,8 +15,8 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f = $this->env->getExtension("native_profiler");
-        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f->enter($__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig"));
+        $__internal_ef15d8a764d582bb15c32a406bf0a9b732d217bfdc028b0f92764d1a56f1d814 = $this->env->getExtension("native_profiler");
+        $__internal_ef15d8a764d582bb15c32a406bf0a9b732d217bfdc028b0f92764d1a56f1d814->enter($__internal_ef15d8a764d582bb15c32a406bf0a9b732d217bfdc028b0f92764d1a56f1d814_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig"));
 
         // line 16
         echo "
@@ -100,7 +100,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
         ";
                 } else {
                     // line 51
-                    echo "            <li class=\"active orange lighten-2\">
+                    echo "            <li class=\"active blue lighten-2\">
                 <span>";
                     // line 52
                     echo twig_escape_filter($this->env, $context["page"], "html", null, true);
@@ -182,7 +182,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 ";
         }
         
-        $__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f->leave($__internal_f29ee712e3c113a5f0ca1bb701378890d04e3a06a3f4c17fc9e0fb359280364f_prof);
+        $__internal_ef15d8a764d582bb15c32a406bf0a9b732d217bfdc028b0f92764d1a56f1d814->leave($__internal_ef15d8a764d582bb15c32a406bf0a9b732d217bfdc028b0f92764d1a56f1d814_prof);
 
     }
 
@@ -251,7 +251,7 @@ class __TwigTemplate_cd4d0f4db509f3edb18044bd0cf439cd454a55d4a67bc17dada9b6a5e33
 /*                 <a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a>*/
 /*             </li>*/
 /*         {% else %}*/
-/*             <li class="active orange lighten-2">*/
+/*             <li class="active blue lighten-2">*/
 /*                 <span>{{ page }}</span>*/
 /*             </li>*/
 /*         {% endif %}*/

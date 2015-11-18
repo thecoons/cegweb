@@ -6,6 +6,10 @@ get_user:
     path:     /getUser
     defaults: { _controller: CEGApplicationBundle:User:getUser }
 
+ceg_application_club:
+    path: /club
+    defaults: { _controller: CEGApplicationBundle:Default:club }
+
 ceg_application_test:
     path: /test
     defaults: { _controller: CEGApplicationBundle:Default:testIndex }

@@ -8,7 +8,12 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+
         return $this->render('CEGApplicationBundle:Default:index.html.twig');
+    }
+    public function clubAction()
+    {
+      return $this-> render('CEGApplicationBundle:Default:club.html.twig');
     }
     public function testIndexAction()
     {

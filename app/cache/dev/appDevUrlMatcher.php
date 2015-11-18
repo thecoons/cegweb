@@ -183,6 +183,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'CEG\\ApplicationBundle\\Controller\\UserController::getUserAction',  '_route' => 'get_user',);
         }
 
+        // ceg_application_club
+        if ($pathinfo === '/club') {
+            return array (  '_controller' => 'CEG\\ApplicationBundle\\Controller\\DefaultController::clubAction',  '_route' => 'ceg_application_club',);
+        }
+
         // ceg_application_test
         if ($pathinfo === '/test') {
             return array (  '_controller' => 'CEG\\ApplicationBundle\\Controller\\DefaultController::testIndexAction',  '_route' => 'ceg_application_test',);

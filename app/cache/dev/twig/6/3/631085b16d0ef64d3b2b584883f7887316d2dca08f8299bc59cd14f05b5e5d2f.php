@@ -21,28 +21,26 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0462a54ef78f9bd4ff414573e786c93aebe204d16a21fff59bc39005431c22c5 = $this->env->getExtension("native_profiler");
-        $__internal_0462a54ef78f9bd4ff414573e786c93aebe204d16a21fff59bc39005431c22c5->enter($__internal_0462a54ef78f9bd4ff414573e786c93aebe204d16a21fff59bc39005431c22c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGArticleBundle:Default:indexArticle.html.twig"));
+        $__internal_53eeee2efcbbfd845683df0ab7a017ac3266d3963ab00f8b2e5a37031e994a1f = $this->env->getExtension("native_profiler");
+        $__internal_53eeee2efcbbfd845683df0ab7a017ac3266d3963ab00f8b2e5a37031e994a1f->enter($__internal_53eeee2efcbbfd845683df0ab7a017ac3266d3963ab00f8b2e5a37031e994a1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGArticleBundle:Default:indexArticle.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0462a54ef78f9bd4ff414573e786c93aebe204d16a21fff59bc39005431c22c5->leave($__internal_0462a54ef78f9bd4ff414573e786c93aebe204d16a21fff59bc39005431c22c5_prof);
+        $__internal_53eeee2efcbbfd845683df0ab7a017ac3266d3963ab00f8b2e5a37031e994a1f->leave($__internal_53eeee2efcbbfd845683df0ab7a017ac3266d3963ab00f8b2e5a37031e994a1f_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_379cc1a37b822605e3ba7f7eb9d70e918c369af54ccc049c60740fe250f41bd5 = $this->env->getExtension("native_profiler");
-        $__internal_379cc1a37b822605e3ba7f7eb9d70e918c369af54ccc049c60740fe250f41bd5->enter($__internal_379cc1a37b822605e3ba7f7eb9d70e918c369af54ccc049c60740fe250f41bd5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_78abbd0ae4432e2197cacab16f3502e1a391ca262934e6ffc6c73182fc894623 = $this->env->getExtension("native_profiler");
+        $__internal_78abbd0ae4432e2197cacab16f3502e1a391ca262934e6ffc6c73182fc894623->enter($__internal_78abbd0ae4432e2197cacab16f3502e1a391ca262934e6ffc6c73182fc894623_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "<section class=\"bg-primary\">
   <div class=\"container\">
 
     <div class=\"row\">
-
-
       <div class=\"col s12 center\">
         <h2 class=\"header blue-text\">\"Aux Dernières Nouvelles\"</h2>
         <div class=\"divider blue\"></div>
@@ -62,21 +60,21 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
       <div class=\"row\">
 
         ";
-        // line 27
+        // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 28
+            // line 26
             echo "        <div class=\"col s12 l6\">
 
           <div class=\"card medium z-depth-3\">
             <div class=\"card-image valign-wrapper waves-effect waves-block waves-light\">
               <a href=\"";
-            // line 32
+            // line 30
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_show", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
             echo "\" clas=\"valign\">
                 <img  class=\"responsive-img \" src=\"";
-            // line 33
+            // line 31
             echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
             echo "/";
             echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute($context["article"], "getHeaderArticle", array(), "method", false, true), "getUrlWay", array(), "method", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($context["article"], "getHeaderArticle", array(), "method", false, true), "getUrlWay", array(), "method"), "/bundles/cegapplication/img/portfolio/2.jpg")) : ("/bundles/cegapplication/img/portfolio/2.jpg")), "html", null, true);
@@ -84,54 +82,89 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
               </a>
             </div>
             <div class=\"card-content\">
-              <span class=\"card-title grey-text text-darken-4 left truncate\">";
-            // line 37
+              <span class=\"card-title blue-text text-darken-4 left truncate\">";
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["article"], "artclTitle", array()), "html", null, true);
             echo "</span>
-            </div>
-            <div class=\"card-action\">
-              <a href=\"";
+              <br>
+              <div class=\"row\">
+
+                <p class=\"small right blue-text\">
+                  posté le ";
             // line 40
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_update", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn orange white-text left\">Mise à jour</a>
-              <a href=\"";
-            // line 41
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_delete", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn red right white-text\">Supprimer</a>
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["article"], "artclDate", array()), "m/d/Y"), "html", null, true);
+            echo "
+                </p>
+              </div>
+              ";
+            // line 43
+            if ( !$this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "roles", array(), "any", true, true)) {
+                // line 44
+                echo "              <div class=\"row\">
+                <p class=\"truncate\">";
+                // line 45
+                echo twig_escape_filter($this->env, $this->getAttribute($context["article"], "artclContent", array()), "html", null, true);
+                echo "</p>
+              </div>
+              ";
+            }
+            // line 48
+            echo "            </div>
+            ";
+            // line 49
+            if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "roles", array(), "any", true, true) && twig_in_filter("ROLE_ADMIN", $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "roles", array())))) {
+                // line 50
+                echo "              ";
+                if (twig_in_filter("ROLE_ADMIN", $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "roles", array()))) {
+                    // line 51
+                    echo "            <div class=\"card-action\">
+            <a href=\"";
+                    // line 52
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_update", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+                    echo "\" class=\"btn orange white-text left\">Mise à jour</a>
+            <a href=\"";
+                    // line 53
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_delete", array("id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+                    echo "\" class=\"btn red right white-text\">Supprimer</a>
             </div>
-
-          </div>
-
+          ";
+                }
+                // line 56
+                echo "        ";
+            }
+            // line 57
+            echo "
+        </div>
         </div>
 
-        ";
+      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 62
         echo "      </div>
 
-    </div>
+      </div>
 
-  </div>
-</div>
-</section>
-<section >
-  <div class=\"container\">
+      </div>
+      </div>
+      </section>
+      <section >
+      <div class=\"container\">
 
 
-    ";
-        // line 60
+      ";
+        // line 73
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
 
 
 
-  </section>
-  ";
+      </section>
+    ";
         
-        $__internal_379cc1a37b822605e3ba7f7eb9d70e918c369af54ccc049c60740fe250f41bd5->leave($__internal_379cc1a37b822605e3ba7f7eb9d70e918c369af54ccc049c60740fe250f41bd5_prof);
+        $__internal_78abbd0ae4432e2197cacab16f3502e1a391ca262934e6ffc6c73182fc894623->leave($__internal_78abbd0ae4432e2197cacab16f3502e1a391ca262934e6ffc6c73182fc894623_prof);
 
     }
 
@@ -147,7 +180,7 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
 
     public function getDebugInfo()
     {
-        return array (  126 => 60,  113 => 49,  99 => 41,  95 => 40,  89 => 37,  80 => 33,  76 => 32,  70 => 28,  66 => 27,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  159 => 73,  146 => 62,  136 => 57,  133 => 56,  127 => 53,  123 => 52,  120 => 51,  117 => 50,  115 => 49,  112 => 48,  106 => 45,  103 => 44,  101 => 43,  95 => 40,  87 => 35,  78 => 31,  74 => 30,  68 => 26,  64 => 25,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "CEGApplicationBundle::baseLayout.html.twig" %}*/
@@ -156,8 +189,6 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
 /*   <div class="container">*/
 /* */
 /*     <div class="row">*/
-/* */
-/* */
 /*       <div class="col s12 center">*/
 /*         <h2 class="header blue-text">"Aux Dernières Nouvelles"</h2>*/
 /*         <div class="divider blue"></div>*/
@@ -186,33 +217,48 @@ class __TwigTemplate_ad3513d2d1b6480c3913433cb5c6c156ff32d30aecf895e2a773d352579
 /*               </a>*/
 /*             </div>*/
 /*             <div class="card-content">*/
-/*               <span class="card-title grey-text text-darken-4 left truncate">{{article.artclTitle}}</span>*/
-/*             </div>*/
-/*             <div class="card-action">*/
-/*               <a href="{{ path('ceg_article_update',{'id':article.id})}}" class="btn orange white-text left">Mise à jour</a>*/
-/*               <a href="{{ path('ceg_article_delete',{'id':article.id})}}" class="btn red right white-text">Supprimer</a>*/
-/*             </div>*/
+/*               <span class="card-title blue-text text-darken-4 left truncate">{{article.artclTitle}}</span>*/
+/*               <br>*/
+/*               <div class="row">*/
 /* */
-/*           </div>*/
+/*                 <p class="small right blue-text">*/
+/*                   posté le {{ article.artclDate|date("m/d/Y") }}*/
+/*                 </p>*/
+/*               </div>*/
+/*               {% if app.user.roles is not defined %}*/
+/*               <div class="row">*/
+/*                 <p class="truncate">{{ article.artclContent }}</p>*/
+/*               </div>*/
+/*               {% endif %}*/
+/*             </div>*/
+/*             {% if app.user.roles is defined and 'ROLE_ADMIN' in app.user.roles %}*/
+/*               {% if 'ROLE_ADMIN' in app.user.roles  %}*/
+/*             <div class="card-action">*/
+/*             <a href="{{ path('ceg_article_update',{'id':article.id})}}" class="btn orange white-text left">Mise à jour</a>*/
+/*             <a href="{{ path('ceg_article_delete',{'id':article.id})}}" class="btn red right white-text">Supprimer</a>*/
+/*             </div>*/
+/*           {% endif %}*/
+/*         {% endif %}*/
 /* */
 /*         </div>*/
+/*         </div>*/
 /* */
-/*         {% endfor %}*/
+/*       {% endfor %}*/
 /*       </div>*/
 /* */
-/*     </div>*/
+/*       </div>*/
 /* */
-/*   </div>*/
-/* </div>*/
-/* </section>*/
-/* <section >*/
-/*   <div class="container">*/
-/* */
-/* */
-/*     {{ knp_pagination_render(pagination) }}*/
+/*       </div>*/
+/*       </div>*/
+/*       </section>*/
+/*       <section >*/
+/*       <div class="container">*/
 /* */
 /* */
+/*       {{ knp_pagination_render(pagination) }}*/
 /* */
-/*   </section>*/
-/*   {% endblock body %}*/
+/* */
+/* */
+/*       </section>*/
+/*     {% endblock body %}*/
 /* */

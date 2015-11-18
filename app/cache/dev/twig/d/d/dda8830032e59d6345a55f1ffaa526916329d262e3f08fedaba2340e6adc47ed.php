@@ -21,20 +21,20 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f8949c8cc80dac9770c585831e1a1eba7119ca5390f619e8f0855b2667b7a061 = $this->env->getExtension("native_profiler");
-        $__internal_f8949c8cc80dac9770c585831e1a1eba7119ca5390f619e8f0855b2667b7a061->enter($__internal_f8949c8cc80dac9770c585831e1a1eba7119ca5390f619e8f0855b2667b7a061_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:index.html.twig"));
+        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295 = $this->env->getExtension("native_profiler");
+        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295->enter($__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f8949c8cc80dac9770c585831e1a1eba7119ca5390f619e8f0855b2667b7a061->leave($__internal_f8949c8cc80dac9770c585831e1a1eba7119ca5390f619e8f0855b2667b7a061_prof);
+        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295->leave($__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_914003533c31f7664519d17d54aa55453ac1f5c4f5aea9985dbfc0b20e959b93 = $this->env->getExtension("native_profiler");
-        $__internal_914003533c31f7664519d17d54aa55453ac1f5c4f5aea9985dbfc0b20e959b93->enter($__internal_914003533c31f7664519d17d54aa55453ac1f5c4f5aea9985dbfc0b20e959b93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d = $this->env->getExtension("native_profiler");
+        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d->enter($__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "  <div id=\"index-banner\" class=\"parallax-container\">
@@ -45,15 +45,13 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
         <div class=\"row center\">
           <h5 class=\"header col s12 light\">Bienvenue sur le site du CEPG.</h5>
         </div>
-        <div class=\"row center\">
-          <a href=\"http://materializecss.com/getting-started.html\" id=\"download-button\" class=\"btn-large waves-effect waves-light blue darken-1\">Get Started</a>
-        </div>
+      
         <br><br>
 
       </div>
     </div>
     <div class=\"parallax\"><img src=\"";
-        // line 18
+        // line 16
         echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
         echo "/bundles/cegapplication/img/backFencing.jpg\" alt=\"Unsplashed background img 1\"></div>
   </div>
@@ -61,13 +59,17 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
   <div class=\"container\">
     <div class=\"section\">
-
       <!--   Icon Section   -->
       <div class=\"row\">
         <div class=\"col s12 m3\">
           <div class=\"icon-block\">
+            <a href=\"";
+        // line 26
+        echo $this->env->getExtension('routing')->getPath("ceg_article_list", array("page" => "1"));
+        echo "\">
             <h2 class=\"center blue-text\"><i class=\"material-icons\">library_books</i></h2>
             <h5 class=\"center\">Actualités</h5>
+            </a>
 
             <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
           </div>
@@ -75,8 +77,13 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
         <div class=\"col s12 m3\">
           <div class=\"icon-block\">
+            <a href=\"";
+        // line 37
+        echo $this->env->getExtension('routing')->getPath("ceg_application_club");
+        echo "\">
             <h2 class=\"center blue-text\"><i class=\"material-icons\">store</i></h2>
             <h5 class=\"center\">Club</h5>
+            </a>
 
             <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
           </div>
@@ -115,7 +122,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
       </div>
     </div>
     <div class=\"parallax\"><img src=\"";
-        // line 77
+        // line 78
         echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
         echo "/bundles/cegapplication/img/fencingHeader.jpg\" alt=\"Unsplashed background img 2\"></div>
   </div>
@@ -141,7 +148,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
   ";
         
-        $__internal_914003533c31f7664519d17d54aa55453ac1f5c4f5aea9985dbfc0b20e959b93->leave($__internal_914003533c31f7664519d17d54aa55453ac1f5c4f5aea9985dbfc0b20e959b93_prof);
+        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d->leave($__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d_prof);
 
     }
 
@@ -157,7 +164,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
     public function getDebugInfo()
     {
-        return array (  119 => 77,  57 => 18,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  126 => 78,  82 => 37,  68 => 26,  55 => 16,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "CEGApplicationBundle::baseLayout.html.twig" %}*/
@@ -170,9 +177,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*         <div class="row center">*/
 /*           <h5 class="header col s12 light">Bienvenue sur le site du CEPG.</h5>*/
 /*         </div>*/
-/*         <div class="row center">*/
-/*           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue darken-1">Get Started</a>*/
-/*         </div>*/
+/*       */
 /*         <br><br>*/
 /* */
 /*       </div>*/
@@ -183,13 +188,14 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /* */
 /*   <div class="container">*/
 /*     <div class="section">*/
-/* */
 /*       <!--   Icon Section   -->*/
 /*       <div class="row">*/
 /*         <div class="col s12 m3">*/
 /*           <div class="icon-block">*/
+/*             <a href="{{path('ceg_article_list',{page:'1'})}}">*/
 /*             <h2 class="center blue-text"><i class="material-icons">library_books</i></h2>*/
 /*             <h5 class="center">Actualités</h5>*/
+/*             </a>*/
 /* */
 /*             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>*/
 /*           </div>*/
@@ -197,8 +203,10 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /* */
 /*         <div class="col s12 m3">*/
 /*           <div class="icon-block">*/
+/*             <a href="{{ path('ceg_application_club') }}">*/
 /*             <h2 class="center blue-text"><i class="material-icons">store</i></h2>*/
 /*             <h5 class="center">Club</h5>*/
+/*             </a>*/
 /* */
 /*             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>*/
 /*           </div>*/

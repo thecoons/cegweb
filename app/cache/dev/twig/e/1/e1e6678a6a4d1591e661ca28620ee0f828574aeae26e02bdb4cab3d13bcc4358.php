@@ -16,8 +16,8 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9 = $this->env->getExtension("native_profiler");
-        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9->enter($__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
+        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273 = $this->env->getExtension("native_profiler");
+        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273->enter($__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -41,10 +41,28 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 <body>
   <nav class=\"blue\" role=\"navigation\">
     <div class=\"nav-wrapper container\">
-      <a id=\"logo-container\" href=\"#\" class=\"white-text brand-logo\">CEPG</a>
+      <a id=\"logo-container\" href=\"";
+        // line 16
+        echo $this->env->getExtension('routing')->getPath("ceg_application_homepage");
+        echo "\" class=\"white-text brand-logo\">CEPG</a>
       <ul class=\"right hide-on-med-and-down\">
-        <li><a class=\"white-text\"href=\"#\">Connexion<i class=\"material-icons right\">perm_identity</i></a></li>
-      </ul>
+        ";
+        // line 18
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array(), "any", false, true), "username", array(), "any", true, true)) {
+            // line 19
+            echo "        <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo "<i class=\"material-icons right\">perm_identity</i></li>
+        ";
+        } else {
+            // line 21
+            echo "        <li><a class=\"white-text\"href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "\">Connexion<i class=\"material-icons right\">perm_identity</i></a></li>
+        ";
+        }
+        // line 23
+        echo "      </ul>
 
       <ul id=\"nav-mobile\" class=\"side-nav\">
         <li><a href=\"#\">Connexion </a></li>
@@ -54,18 +72,18 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
   </nav>
 
 ";
-        // line 28
+        // line 32
         $this->displayBlock('body', $context, $blocks);
-        // line 30
+        // line 34
         echo "
   <!--  Scripts-->
   <script src=\"https://code.jquery.com/jquery-2.1.1.min.js\"></script>
   <script src=\"";
-        // line 33
+        // line 37
         echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
         echo "/bundles/cegapplication/js/materialize.js\"></script>
   <script src=\"";
-        // line 34
+        // line 38
         echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
         echo "/bundles/cegapplication/js/init.js\"></script>
 
@@ -73,18 +91,18 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 </html>
 ";
         
-        $__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9->leave($__internal_da0a588c722942d2ce0a671162dabb29441b502920bca2a00054a81ad12934f9_prof);
+        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273->leave($__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273_prof);
 
     }
 
-    // line 28
+    // line 32
     public function block_body($context, array $blocks = array())
     {
-        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386 = $this->env->getExtension("native_profiler");
-        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386->enter($__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830 = $this->env->getExtension("native_profiler");
+        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830->enter($__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386->leave($__internal_064be526a10ce43eae6b33b02db5cee30c0a413127b40bd5995e952d07362386_prof);
+        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830->leave($__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830_prof);
 
     }
 
@@ -100,7 +118,7 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     public function getDebugInfo()
     {
-        return array (  81 => 28,  69 => 34,  65 => 33,  60 => 30,  58 => 28,  38 => 11,  34 => 10,  23 => 1,);
+        return array (  99 => 32,  87 => 38,  83 => 37,  78 => 34,  76 => 32,  65 => 23,  59 => 21,  53 => 19,  51 => 18,  46 => 16,  38 => 11,  34 => 10,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -118,9 +136,13 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 /* <body>*/
 /*   <nav class="blue" role="navigation">*/
 /*     <div class="nav-wrapper container">*/
-/*       <a id="logo-container" href="#" class="white-text brand-logo">CEPG</a>*/
+/*       <a id="logo-container" href="{{ path('ceg_application_homepage')}}" class="white-text brand-logo">CEPG</a>*/
 /*       <ul class="right hide-on-med-and-down">*/
-/*         <li><a class="white-text"href="#">Connexion<i class="material-icons right">perm_identity</i></a></li>*/
+/*         {% if app.user.username is defined%}*/
+/*         <li>{{app.user.username}}<i class="material-icons right">perm_identity</i></li>*/
+/*         {% else %}*/
+/*         <li><a class="white-text"href="{{ path('fos_user_security_login')}}">Connexion<i class="material-icons right">perm_identity</i></a></li>*/
+/*         {% endif %}*/
 /*       </ul>*/
 /* */
 /*       <ul id="nav-mobile" class="side-nav">*/

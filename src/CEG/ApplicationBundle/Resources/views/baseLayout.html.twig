@@ -13,9 +13,13 @@
 <body>
   <nav class="blue" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="white-text brand-logo">CEPG</a>
+      <a id="logo-container" href="{{ path('ceg_application_homepage')}}" class="white-text brand-logo">CEPG</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="white-text"href="#">Connexion<i class="material-icons right">perm_identity</i></a></li>
+        {% if app.user.username is defined%}
+        <li>{{app.user.username}}<i class="material-icons right">perm_identity</i></li>
+        {% else %}
+        <li><a class="white-text"href="{{ path('fos_user_security_login')}}">Connexion<i class="material-icons right">perm_identity</i></a></li>
+        {% endif %}
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
