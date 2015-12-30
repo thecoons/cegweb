@@ -19,7 +19,7 @@ ceg_article_check:
     defaults: { _controller: CEGArticleBundle:Default:checkArticle }
 
 ceg_article_list:
-    path: /list/{page}
+    path: /list/{page}/{type}
     defaults: {_controller: CEGArticleBundle:Default:list }
 
 ceg_image_delete:

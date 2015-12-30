@@ -21,20 +21,20 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8240511c6f30561ec065cd9e6e10d2c7026c0bdb054f130891609450fbd4b546 = $this->env->getExtension("native_profiler");
-        $__internal_8240511c6f30561ec065cd9e6e10d2c7026c0bdb054f130891609450fbd4b546->enter($__internal_8240511c6f30561ec065cd9e6e10d2c7026c0bdb054f130891609450fbd4b546_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGArticleBundle:Default:createArticle.html.twig"));
+        $__internal_180a2c326e969b70cd8d7a2d5bbd8280259dcc1c7e9ac2af211a4afee668bfcf = $this->env->getExtension("native_profiler");
+        $__internal_180a2c326e969b70cd8d7a2d5bbd8280259dcc1c7e9ac2af211a4afee668bfcf->enter($__internal_180a2c326e969b70cd8d7a2d5bbd8280259dcc1c7e9ac2af211a4afee668bfcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGArticleBundle:Default:createArticle.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8240511c6f30561ec065cd9e6e10d2c7026c0bdb054f130891609450fbd4b546->leave($__internal_8240511c6f30561ec065cd9e6e10d2c7026c0bdb054f130891609450fbd4b546_prof);
+        $__internal_180a2c326e969b70cd8d7a2d5bbd8280259dcc1c7e9ac2af211a4afee668bfcf->leave($__internal_180a2c326e969b70cd8d7a2d5bbd8280259dcc1c7e9ac2af211a4afee668bfcf_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9cbe53b5242634b78e378f46d3d2c6a56f9fe952f96c9af9a931479a8c1a1836 = $this->env->getExtension("native_profiler");
-        $__internal_9cbe53b5242634b78e378f46d3d2c6a56f9fe952f96c9af9a931479a8c1a1836->enter($__internal_9cbe53b5242634b78e378f46d3d2c6a56f9fe952f96c9af9a931479a8c1a1836_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_51c279bab39c02986fdb16f3c7c30380f7e9601c42baef4ba04c3dae82723daa = $this->env->getExtension("native_profiler");
+        $__internal_51c279bab39c02986fdb16f3c7c30380f7e9601c42baef4ba04c3dae82723daa->enter($__internal_51c279bab39c02986fdb16f3c7c30380f7e9601c42baef4ba04c3dae82723daa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "<div class=\"container\">
@@ -43,7 +43,7 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 
           ";
         // line 7
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("class" => "col s12")));
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("class" => "col s12", "novalidate" => "novalidate")));
         echo "
           ";
         // line 8
@@ -81,7 +81,22 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
         echo "
                   ";
         // line 21
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclContent", array()), 'widget', array("attr" => array("class" => "materialize-textarea")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclContent", array()), 'widget');
+        echo "
+                  </div>
+                  <div class=\"input-field col s12\">
+                  ";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclType", array()), 'errors');
+        echo "
+                  ";
+        // line 25
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclType", array()), 'widget');
+        echo "
+
+                  ";
+        // line 27
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclType", array()), 'label', array("label" => "Type de l'article"));
         echo "
                   </div>
 
@@ -91,17 +106,17 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
             </div>
             <div class=\"col-md-12\">
                 ";
-        // line 29
+        // line 35
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "artclPost", array()), 'widget', array("attr" => array("class" => "btn right orange")));
         echo "
             </div>
             ";
-        // line 31
+        // line 37
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
             ";
-        // line 33
+        // line 39
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
           </div>
@@ -109,7 +124,7 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 
 ";
         
-        $__internal_9cbe53b5242634b78e378f46d3d2c6a56f9fe952f96c9af9a931479a8c1a1836->leave($__internal_9cbe53b5242634b78e378f46d3d2c6a56f9fe952f96c9af9a931479a8c1a1836_prof);
+        $__internal_51c279bab39c02986fdb16f3c7c30380f7e9601c42baef4ba04c3dae82723daa->leave($__internal_51c279bab39c02986fdb16f3c7c30380f7e9601c42baef4ba04c3dae82723daa_prof);
 
     }
 
@@ -125,7 +140,7 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 
     public function getDebugInfo()
     {
-        return array (  105 => 33,  100 => 31,  95 => 29,  84 => 21,  80 => 20,  76 => 19,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  50 => 8,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  120 => 39,  115 => 37,  110 => 35,  99 => 27,  94 => 25,  90 => 24,  84 => 21,  80 => 20,  76 => 19,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  50 => 8,  46 => 7,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "CEGApplicationBundle::baseLayout.html.twig" %}*/
@@ -134,7 +149,7 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 /*   <div class="section">*/
 /* */
 /* */
-/*           {{ form_start(form,{'attr':{'class':'col s12'}})}}*/
+/*           {{ form_start(form,{'attr':{'class':'col s12',novalidate:'novalidate'}})}}*/
 /*           {{ form_widget(form._token) }}*/
 /*           <div class="row">*/
 /*             <div class="col-md-10">*/
@@ -148,7 +163,13 @@ class __TwigTemplate_6cf4a7d09864b8951ed6086c8d7c712723bffbb4f76b050e7d5357d7046
 /*                   <div class="input-field col s12">*/
 /*                   {{ form_label(form.artclContent,"Texte de l'article")}}*/
 /*                   {{ form_errors(form.artclContent)}}*/
-/*                   {{ form_widget(form.artclContent,{'attr':{'class':'materialize-textarea'}})}}*/
+/*                   {{ form_widget(form.artclContent)}}*/
+/*                   </div>*/
+/*                   <div class="input-field col s12">*/
+/*                   {{ form_errors(form.artclType)}}*/
+/*                   {{ form_widget(form.artclType)}}*/
+/* */
+/*                   {{ form_label(form.artclType,"Type de l'article")}}*/
 /*                   </div>*/
 /* */
 /* */

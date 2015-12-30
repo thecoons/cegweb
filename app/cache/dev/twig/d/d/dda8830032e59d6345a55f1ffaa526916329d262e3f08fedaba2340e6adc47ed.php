@@ -21,20 +21,20 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295 = $this->env->getExtension("native_profiler");
-        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295->enter($__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:index.html.twig"));
+        $__internal_6997a891a542b182fb2ced6421442562c1e0d1e147c2f0ba86dbf15c468a7a28 = $this->env->getExtension("native_profiler");
+        $__internal_6997a891a542b182fb2ced6421442562c1e0d1e147c2f0ba86dbf15c468a7a28->enter($__internal_6997a891a542b182fb2ced6421442562c1e0d1e147c2f0ba86dbf15c468a7a28_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295->leave($__internal_cf41a47b100864d7d510b6582d11762259bda25513a1a7cbca2728bd818a3295_prof);
+        $__internal_6997a891a542b182fb2ced6421442562c1e0d1e147c2f0ba86dbf15c468a7a28->leave($__internal_6997a891a542b182fb2ced6421442562c1e0d1e147c2f0ba86dbf15c468a7a28_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d = $this->env->getExtension("native_profiler");
-        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d->enter($__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3e32c391de9276cedaea5fd864f26fec169c677667773cabced1a70114844781 = $this->env->getExtension("native_profiler");
+        $__internal_3e32c391de9276cedaea5fd864f26fec169c677667773cabced1a70114844781->enter($__internal_3e32c391de9276cedaea5fd864f26fec169c677667773cabced1a70114844781_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "  <div id=\"index-banner\" class=\"parallax-container\">
@@ -45,7 +45,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
         <div class=\"row center\">
           <h5 class=\"header col s12 light\">Bienvenue sur le site du CEPG.</h5>
         </div>
-      
+
         <br><br>
 
       </div>
@@ -65,13 +65,13 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
           <div class=\"icon-block\">
             <a href=\"";
         // line 26
-        echo $this->env->getExtension('routing')->getPath("ceg_article_list", array("page" => "1"));
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ceg_article_list", array("page" => "1", "type" => "tous")), "html", null, true);
         echo "\">
             <h2 class=\"center blue-text\"><i class=\"material-icons\">library_books</i></h2>
             <h5 class=\"center\">Actualités</h5>
             </a>
 
-            <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class=\"light\">Suivez au fil du temps les résultats,les articles, et la vie du club.</p>
           </div>
         </div>
 
@@ -85,7 +85,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
             <h5 class=\"center\">Club</h5>
             </a>
 
-            <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class=\"light\">Trouvez tous les renseignements, le calendrier, les classements, nos horaires.</p>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
             <h2 class=\"center blue-text\"><i class=\"material-icons\">language</i></h2>
             <h5 class=\"center\">Liens</h5>
 
-            <p class=\"light\">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p class=\"light\">Accédez aux sites des institutions et référents de l'escrime.</p>
           </div>
         </div>
 
@@ -103,7 +103,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
             <h2 class=\"center blue-text\"><i class=\"material-icons\">stars</i></h2>
             <h5 class=\"center\">Sponsors</h5>
 
-            <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class=\"light\">Découvrez les partenaires qui nous soutiennent.</p>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
     <div class=\"section no-pad-bot\">
       <div class=\"containe\">
         <div class=\"row center\">
-          <h5 class=\"header col s12 light\">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class=\"header col s12 light\">Tout le secret des armes ne consiste qu'en deux choses : à donner et à ne pas recevoir.    - Molière -</h5>
         </div>
       </div>
     </div>
@@ -135,8 +135,8 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
       <div class=\"row\">
         <div class=\"col s12 center\">
           <h3><i class=\"mdi-content-send white-text\"></i></h3>
-          <h4><p class=\"white-text\">Contact Us</p></h4>
-          <p class=\"left-align light white-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4><p class=\"white-text\">Nous rencontrer</p></h4>
+          <p class=\"left-align light white-text\">Le Cercle d'Escrime Pays de Grasse existe depuis 1970. Une convention est signée entre la Communauté d'agglomeration Pays de Grasse et cette association lois 1901, présidée par Monsieur André Astier. Nous enseignons le fleuret et l'épée dans deux salles. Ce site vous permettra de trouver des reponses à vos questions</p>
         </div>
       </div>
 
@@ -148,7 +148,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 
   ";
         
-        $__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d->leave($__internal_8e17b1e169a67e6b74046726b7986b58c89493a1c3f8d763c54519200ded785d_prof);
+        $__internal_3e32c391de9276cedaea5fd864f26fec169c677667773cabced1a70114844781->leave($__internal_3e32c391de9276cedaea5fd864f26fec169c677667773cabced1a70114844781_prof);
 
     }
 
@@ -177,7 +177,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*         <div class="row center">*/
 /*           <h5 class="header col s12 light">Bienvenue sur le site du CEPG.</h5>*/
 /*         </div>*/
-/*       */
+/* */
 /*         <br><br>*/
 /* */
 /*       </div>*/
@@ -192,12 +192,12 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*       <div class="row">*/
 /*         <div class="col s12 m3">*/
 /*           <div class="icon-block">*/
-/*             <a href="{{path('ceg_article_list',{page:'1'})}}">*/
+/*             <a href="{{path('ceg_article_list',{page:'1',type:'tous'})}}">*/
 /*             <h2 class="center blue-text"><i class="material-icons">library_books</i></h2>*/
 /*             <h5 class="center">Actualités</h5>*/
 /*             </a>*/
 /* */
-/*             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>*/
+/*             <p class="light">Suivez au fil du temps les résultats,les articles, et la vie du club.</p>*/
 /*           </div>*/
 /*         </div>*/
 /* */
@@ -208,7 +208,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*             <h5 class="center">Club</h5>*/
 /*             </a>*/
 /* */
-/*             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>*/
+/*             <p class="light">Trouvez tous les renseignements, le calendrier, les classements, nos horaires.</p>*/
 /*           </div>*/
 /*         </div>*/
 /* */
@@ -217,7 +217,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*             <h2 class="center blue-text"><i class="material-icons">language</i></h2>*/
 /*             <h5 class="center">Liens</h5>*/
 /* */
-/*             <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>*/
+/*             <p class="light">Accédez aux sites des institutions et référents de l'escrime.</p>*/
 /*           </div>*/
 /*         </div>*/
 /* */
@@ -226,7 +226,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*             <h2 class="center blue-text"><i class="material-icons">stars</i></h2>*/
 /*             <h5 class="center">Sponsors</h5>*/
 /* */
-/*             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>*/
+/*             <p class="light">Découvrez les partenaires qui nous soutiennent.</p>*/
 /*           </div>*/
 /*         </div>*/
 /* */
@@ -240,7 +240,7 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*     <div class="section no-pad-bot">*/
 /*       <div class="containe">*/
 /*         <div class="row center">*/
-/*           <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>*/
+/*           <h5 class="header col s12 light">Tout le secret des armes ne consiste qu'en deux choses : à donner et à ne pas recevoir.    - Molière -</h5>*/
 /*         </div>*/
 /*       </div>*/
 /*     </div>*/
@@ -255,8 +255,8 @@ class __TwigTemplate_48171406ae0d261626a529414ffd726fca86901fdd8b6a62c0756f94f7e
 /*       <div class="row">*/
 /*         <div class="col s12 center">*/
 /*           <h3><i class="mdi-content-send white-text"></i></h3>*/
-/*           <h4><p class="white-text">Contact Us</p></h4>*/
-/*           <p class="left-align light white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>*/
+/*           <h4><p class="white-text">Nous rencontrer</p></h4>*/
+/*           <p class="left-align light white-text">Le Cercle d'Escrime Pays de Grasse existe depuis 1970. Une convention est signée entre la Communauté d'agglomeration Pays de Grasse et cette association lois 1901, présidée par Monsieur André Astier. Nous enseignons le fleuret et l'épée dans deux salles. Ce site vous permettra de trouver des reponses à vos questions</p>*/
 /*         </div>*/
 /*       </div>*/
 /* */

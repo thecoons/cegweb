@@ -5,6 +5,7 @@ namespace CEG\ArticleBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ArticleType extends AbstractType
 {
@@ -17,6 +18,15 @@ class ArticleType extends AbstractType
         $builder
             ->add('artclTitle','text')
             ->add('artclContent','textarea')
+            ->add('artclType','choice',array(
+                  'choices' => array(
+                        'Information' => 'Information',
+                        'Compétition' => 'Compétition',
+                        'Résultat' => 'Résultat',
+                        'Stage' => 'Stage'
+                  ),
+                  'choices_as_values' => true,
+            ))
             ->add('artclPost','submit',array('label' => 'Publier', ))
         ;
     }

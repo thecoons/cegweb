@@ -16,8 +16,8 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273 = $this->env->getExtension("native_profiler");
-        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273->enter($__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
+        $__internal_877c3ed5d93ae6bf9b610d016143b6c9980c2e3a2cb99a1ca7fa155aca85024a = $this->env->getExtension("native_profiler");
+        $__internal_877c3ed5d93ae6bf9b610d016143b6c9980c2e3a2cb99a1ca7fa155aca85024a->enter($__internal_877c3ed5d93ae6bf9b610d016143b6c9980c2e3a2cb99a1ca7fa155aca85024a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle::baseLayout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -65,7 +65,10 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
         echo "      </ul>
 
       <ul id=\"nav-mobile\" class=\"side-nav\">
-        <li><a href=\"#\">Connexion </a></li>
+        <li><a href=\"";
+        // line 26
+        echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+        echo "\">Connexion </a></li>
       </ul>
       <a href=\"#\" data-activates=\"nav-mobile\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>
     </div>
@@ -86,23 +89,29 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
         // line 38
         echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
         echo "/bundles/cegapplication/js/init.js\"></script>
+  <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+  <script>
+  tinymce.init({
+    selector: 'textarea'
+  });
+  </script>
 
   </body>
 </html>
 ";
         
-        $__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273->leave($__internal_caa19db7cfdb8889c6d9e3ac05daf4c5567c8b017c035c91494b955a34088273_prof);
+        $__internal_877c3ed5d93ae6bf9b610d016143b6c9980c2e3a2cb99a1ca7fa155aca85024a->leave($__internal_877c3ed5d93ae6bf9b610d016143b6c9980c2e3a2cb99a1ca7fa155aca85024a_prof);
 
     }
 
     // line 32
     public function block_body($context, array $blocks = array())
     {
-        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830 = $this->env->getExtension("native_profiler");
-        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830->enter($__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c53de10eaeaa5d8470bcc15ef1f71ce9768773a4d62cd107da71be2621a14904 = $this->env->getExtension("native_profiler");
+        $__internal_c53de10eaeaa5d8470bcc15ef1f71ce9768773a4d62cd107da71be2621a14904->enter($__internal_c53de10eaeaa5d8470bcc15ef1f71ce9768773a4d62cd107da71be2621a14904_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830->leave($__internal_287538cb94928c9a13fa9b37fe747cb091b0fd6f60d57d753070b3ecddac6830_prof);
+        $__internal_c53de10eaeaa5d8470bcc15ef1f71ce9768773a4d62cd107da71be2621a14904->leave($__internal_c53de10eaeaa5d8470bcc15ef1f71ce9768773a4d62cd107da71be2621a14904_prof);
 
     }
 
@@ -118,7 +127,7 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 
     public function getDebugInfo()
     {
-        return array (  99 => 32,  87 => 38,  83 => 37,  78 => 34,  76 => 32,  65 => 23,  59 => 21,  53 => 19,  51 => 18,  46 => 16,  38 => 11,  34 => 10,  23 => 1,);
+        return array (  108 => 32,  90 => 38,  86 => 37,  81 => 34,  79 => 32,  70 => 26,  65 => 23,  59 => 21,  53 => 19,  51 => 18,  46 => 16,  38 => 11,  34 => 10,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -146,7 +155,7 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 /*       </ul>*/
 /* */
 /*       <ul id="nav-mobile" class="side-nav">*/
-/*         <li><a href="#">Connexion </a></li>*/
+/*         <li><a href="{{ path('fos_user_security_login')}}">Connexion </a></li>*/
 /*       </ul>*/
 /*       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>*/
 /*     </div>*/
@@ -159,6 +168,12 @@ class __TwigTemplate_00dbcddf2110e1ce47c63a093230725d58ee46a4c8bfeba8182e78d7bd1
 /*   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>*/
 /*   <script src="{{web_path}}/bundles/cegapplication/js/materialize.js"></script>*/
 /*   <script src="{{web_path}}/bundles/cegapplication/js/init.js"></script>*/
+/*   <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>*/
+/*   <script>*/
+/*   tinymce.init({*/
+/*     selector: 'textarea'*/
+/*   });*/
+/*   </script>*/
 /* */
 /*   </body>*/
 /* </html>*/

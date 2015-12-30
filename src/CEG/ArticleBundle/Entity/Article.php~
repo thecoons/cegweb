@@ -48,12 +48,34 @@ class Article
      * @ORM\Column(name="artcl_like", type="integer")
      */
     private $artclLike;
-    
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="artcl_type", type="text")
+     */
+    private $artclType;
+
     /**
     * @ORM\OneToMany(targetEntity="CEG\ArticleBundle\Entity\Image", mappedBy="article",cascade={"persist", "remove"})
     */
     private $images; // Notez le « s », une annonce est liée à plusieurs candidatures
 
+    /**
+    * @ORM\OneToMany(targetEntity="CEG\ArticleBundle\Entity\Image", mappedBy="article",cascade={"persist", "remove"})
+    */
+    private $files; // Notez le « s », une annonce est liée à plusieurs candidatures
+
+
+    public function getHeaderArticle()
+    {
+      $imgs = $this->getImages();
+      foreach($imgs as $img){
+        if($img->getUrl() == "jpeg"){
+          return $img;
+        }
+      }
+    }
 
     /**
      * Get id
@@ -155,5 +177,45 @@ class Article
     public function getArtclLike()
     {
         return $this->artclLike;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add images
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $images
+     * @return Article
+     */
+    public function addImage(\CEG\ArticleBundle\Entity\Image $images)
+    {
+        $this->images[] = $images;
+
+        return $this;
+    }
+
+    /**
+     * Remove images
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $images
+     */
+    public function removeImage(\CEG\ArticleBundle\Entity\Image $images)
+    {
+        $this->images->removeElement($images);
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 }

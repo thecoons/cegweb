@@ -23,7 +23,7 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Connexion </a></li>
+        <li><a href="{{ path('fos_user_security_login')}}">Connexion </a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -36,6 +36,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{{web_path}}/bundles/cegapplication/js/materialize.js"></script>
   <script src="{{web_path}}/bundles/cegapplication/js/init.js"></script>
+  <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+  <script>
+  tinymce.init({
+    selector: 'textarea'
+  });
+  </script>
 
   </body>
 </html>

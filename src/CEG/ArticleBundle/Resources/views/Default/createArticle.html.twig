@@ -4,7 +4,7 @@
   <div class="section">
 
 
-          {{ form_start(form,{'attr':{'class':'col s12'}})}}
+          {{ form_start(form,{'attr':{'class':'col s12',novalidate:'novalidate'}})}}
           {{ form_widget(form._token) }}
           <div class="row">
             <div class="col-md-10">
@@ -18,7 +18,13 @@
                   <div class="input-field col s12">
                   {{ form_label(form.artclContent,"Texte de l'article")}}
                   {{ form_errors(form.artclContent)}}
-                  {{ form_widget(form.artclContent,{'attr':{'class':'materialize-textarea'}})}}
+                  {{ form_widget(form.artclContent)}}
+                  </div>
+                  <div class="input-field col s12">
+                  {{ form_errors(form.artclType)}}
+                  {{ form_widget(form.artclType)}}
+
+                  {{ form_label(form.artclType,"Type de l'article")}}
                   </div>
 
 

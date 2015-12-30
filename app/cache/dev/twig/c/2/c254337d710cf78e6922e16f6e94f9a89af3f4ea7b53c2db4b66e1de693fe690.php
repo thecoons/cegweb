@@ -21,20 +21,20 @@ class __TwigTemplate_3656ce51e1fd0c24559422e7abbb642908fc66079a018ca80d92c5c0e9d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0be49fe184cb43806f31175fd8458cfad24d6295840e32fc81b8b173422735f1 = $this->env->getExtension("native_profiler");
-        $__internal_0be49fe184cb43806f31175fd8458cfad24d6295840e32fc81b8b173422735f1->enter($__internal_0be49fe184cb43806f31175fd8458cfad24d6295840e32fc81b8b173422735f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:club.html.twig"));
+        $__internal_cfd6cd7d9aef7a83f6b60f0428b6ad2c923819841304c46f2d06467d04c9c681 = $this->env->getExtension("native_profiler");
+        $__internal_cfd6cd7d9aef7a83f6b60f0428b6ad2c923819841304c46f2d06467d04c9c681->enter($__internal_cfd6cd7d9aef7a83f6b60f0428b6ad2c923819841304c46f2d06467d04c9c681_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "CEGApplicationBundle:Default:club.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0be49fe184cb43806f31175fd8458cfad24d6295840e32fc81b8b173422735f1->leave($__internal_0be49fe184cb43806f31175fd8458cfad24d6295840e32fc81b8b173422735f1_prof);
+        $__internal_cfd6cd7d9aef7a83f6b60f0428b6ad2c923819841304c46f2d06467d04c9c681->leave($__internal_cfd6cd7d9aef7a83f6b60f0428b6ad2c923819841304c46f2d06467d04c9c681_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3f721e24ff996af97d84d12da621e788118541e15d6de0145aff664ca1a83440 = $this->env->getExtension("native_profiler");
-        $__internal_3f721e24ff996af97d84d12da621e788118541e15d6de0145aff664ca1a83440->enter($__internal_3f721e24ff996af97d84d12da621e788118541e15d6de0145aff664ca1a83440_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_528259a081682b0287ead2b7d99bdced1a8668272f404ea206ea9f4558ac0efa = $this->env->getExtension("native_profiler");
+        $__internal_528259a081682b0287ead2b7d99bdced1a8668272f404ea206ea9f4558ac0efa->enter($__internal_528259a081682b0287ead2b7d99bdced1a8668272f404ea206ea9f4558ac0efa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "<div class=\"section\">
@@ -192,11 +192,65 @@ class __TwigTemplate_3656ce51e1fd0c24559422e7abbb642908fc66079a018ca80d92c5c0e9d
     </li>
     <li>
       <div class=\"collapsible-header blue\"><i class=\"material-icons\">recent_actors</i>Les Maîtres d'armes</div>
-      <div class=\"collapsible-body black-text\"><p>Lorem ipsum dolor sit amet.</p></div>
+      <div class=\"collapsible-body black-text\">
+        <br>
+        <div class=\"row\">
+          <div class=\"col s2\">
+          <img class=\"responsive-img\" src=\"";
+        // line 162
+        echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
+        echo "/bundles/cegapplication/img/Carole.jpg\" style=\"width:125px;margin-left:10px;\">
+          </div>
+          <div class=\"col s4\" style=\"margin-left:-40px;\">
+            <p><b>Profession </b>:Educateur Sportif Territorial à la Communauté d'Agglomération du Pays de Grasse</p>
+            <p>
+              <b>Activité principale</b>:Diplôme d'Etat Supérieur d'Escrime (M° d'escrime)
+            </p>
+            <p>
+              <b>Diplôme:</b> BPJSEP Activités Physiques pour Tous, <br>
+              Arbitre National à l'épée
+            </p>
+          </div>
+          <div class=\"col s2\" >
+          <img class=\"responsive-img\" src=\"";
+        // line 175
+        echo twig_escape_filter($this->env, (isset($context["web_path"]) ? $context["web_path"] : $this->getContext($context, "web_path")), "html", null, true);
+        echo "/bundles/cegapplication/img/Elise.jpg\" style=\"width:125px;\">
+          </div>
+          <div class=\"col s4\" style=\"margin-left:-40px;\">
+            <p><b>Profession </b>: Educateur Sportif Territorial contractuel à la Communauté d'Agglomération du Pays de Grasse</p>
+            <p>
+              <b>Activité principale</b>:Diplôme d'Etat Option Escrime (M° d'armes)
+            </p>
+            <p>
+              <b>Diplôme:</b> BPJSEP Activités Physiques pour Tous, <br>
+              Arbitre National à l'épée
+            </p>
+          </div>
+
+        </div>
+      </div>
     </li>
     <li>
       <div class=\"collapsible-header blue\"><i class=\"material-icons\">person_pin</i>Contacts</div>
-      <div class=\"collapsible-body black-text\"><p>Lorem ipsum dolor sit amet.</p></div>
+      <div class=\"collapsible-body black-text\">
+      <div class=\"row\">
+        <div class=\"col s5 offset-s1\">
+          <b>La salle d’armes</b> :<br>
+          Numéro de téléphone: 04.93.36.50.07.<br>
+          Numéro de fax: 04.93.36.50.07.<br><br>
+          <b>Adresse</b>: 2, rue Martine Carol - 06130 Grasse <br>
+          <b>Email</b>: cercledescrimepaysdegrasse@hotmail.fr
+        </div>
+        <div class=\"col s6\">
+          <b>Maîtres d'armes</b>: <br>
+          Maître Elisabeth POSTEL <br>
+          Tel: 06.63.98.45.33 <br><br>
+          Maître Carol GARRIDO <br>
+          Tel: 06.82.84.17.07
+        </div>
+      </div>
+    </div>
     </li>
   </ul>
   </div>
@@ -211,7 +265,7 @@ class __TwigTemplate_3656ce51e1fd0c24559422e7abbb642908fc66079a018ca80d92c5c0e9d
 </script>
 ";
         
-        $__internal_3f721e24ff996af97d84d12da621e788118541e15d6de0145aff664ca1a83440->leave($__internal_3f721e24ff996af97d84d12da621e788118541e15d6de0145aff664ca1a83440_prof);
+        $__internal_528259a081682b0287ead2b7d99bdced1a8668272f404ea206ea9f4558ac0efa->leave($__internal_528259a081682b0287ead2b7d99bdced1a8668272f404ea206ea9f4558ac0efa_prof);
 
     }
 
@@ -227,7 +281,7 @@ class __TwigTemplate_3656ce51e1fd0c24559422e7abbb642908fc66079a018ca80d92c5c0e9d
 
     public function getDebugInfo()
     {
-        return array (  40 => 3,  34 => 2,  11 => 1,);
+        return array (  217 => 175,  201 => 162,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "CEGApplicationBundle::baseLayout.html.twig" %}*/
@@ -387,11 +441,59 @@ class __TwigTemplate_3656ce51e1fd0c24559422e7abbb642908fc66079a018ca80d92c5c0e9d
 /*     </li>*/
 /*     <li>*/
 /*       <div class="collapsible-header blue"><i class="material-icons">recent_actors</i>Les Maîtres d'armes</div>*/
-/*       <div class="collapsible-body black-text"><p>Lorem ipsum dolor sit amet.</p></div>*/
+/*       <div class="collapsible-body black-text">*/
+/*         <br>*/
+/*         <div class="row">*/
+/*           <div class="col s2">*/
+/*           <img class="responsive-img" src="{{web_path}}/bundles/cegapplication/img/Carole.jpg" style="width:125px;margin-left:10px;">*/
+/*           </div>*/
+/*           <div class="col s4" style="margin-left:-40px;">*/
+/*             <p><b>Profession </b>:Educateur Sportif Territorial à la Communauté d'Agglomération du Pays de Grasse</p>*/
+/*             <p>*/
+/*               <b>Activité principale</b>:Diplôme d'Etat Supérieur d'Escrime (M° d'escrime)*/
+/*             </p>*/
+/*             <p>*/
+/*               <b>Diplôme:</b> BPJSEP Activités Physiques pour Tous, <br>*/
+/*               Arbitre National à l'épée*/
+/*             </p>*/
+/*           </div>*/
+/*           <div class="col s2" >*/
+/*           <img class="responsive-img" src="{{web_path}}/bundles/cegapplication/img/Elise.jpg" style="width:125px;">*/
+/*           </div>*/
+/*           <div class="col s4" style="margin-left:-40px;">*/
+/*             <p><b>Profession </b>: Educateur Sportif Territorial contractuel à la Communauté d'Agglomération du Pays de Grasse</p>*/
+/*             <p>*/
+/*               <b>Activité principale</b>:Diplôme d'Etat Option Escrime (M° d'armes)*/
+/*             </p>*/
+/*             <p>*/
+/*               <b>Diplôme:</b> BPJSEP Activités Physiques pour Tous, <br>*/
+/*               Arbitre National à l'épée*/
+/*             </p>*/
+/*           </div>*/
+/* */
+/*         </div>*/
+/*       </div>*/
 /*     </li>*/
 /*     <li>*/
 /*       <div class="collapsible-header blue"><i class="material-icons">person_pin</i>Contacts</div>*/
-/*       <div class="collapsible-body black-text"><p>Lorem ipsum dolor sit amet.</p></div>*/
+/*       <div class="collapsible-body black-text">*/
+/*       <div class="row">*/
+/*         <div class="col s5 offset-s1">*/
+/*           <b>La salle d’armes</b> :<br>*/
+/*           Numéro de téléphone: 04.93.36.50.07.<br>*/
+/*           Numéro de fax: 04.93.36.50.07.<br><br>*/
+/*           <b>Adresse</b>: 2, rue Martine Carol - 06130 Grasse <br>*/
+/*           <b>Email</b>: cercledescrimepaysdegrasse@hotmail.fr*/
+/*         </div>*/
+/*         <div class="col s6">*/
+/*           <b>Maîtres d'armes</b>: <br>*/
+/*           Maître Elisabeth POSTEL <br>*/
+/*           Tel: 06.63.98.45.33 <br><br>*/
+/*           Maître Carol GARRIDO <br>*/
+/*           Tel: 06.82.84.17.07*/
+/*         </div>*/
+/*       </div>*/
+/*     </div>*/
 /*     </li>*/
 /*   </ul>*/
 /*   </div>*/

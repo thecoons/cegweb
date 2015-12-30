@@ -50,6 +50,13 @@ class Article
     private $artclLike;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="artcl_type", type="text")
+     */
+    private $artclType;
+
+    /**
     * @ORM\OneToMany(targetEntity="CEG\ArticleBundle\Entity\Image", mappedBy="article",cascade={"persist", "remove"})
     */
     private $images; // Notez le « s », une annonce est liée à plusieurs candidatures
@@ -210,5 +217,61 @@ class Article
     public function getImages()
     {
         return $this->images;
+    }
+
+    /**
+     * Set artclType
+     *
+     * @param string $artclType
+     * @return Article
+     */
+    public function setArtclType($artclType)
+    {
+        $this->artclType = $artclType;
+
+        return $this;
+    }
+
+    /**
+     * Get artclType
+     *
+     * @return string 
+     */
+    public function getArtclType()
+    {
+        return $this->artclType;
+    }
+
+    /**
+     * Add files
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $files
+     * @return Article
+     */
+    public function addFile(\CEG\ArticleBundle\Entity\Image $files)
+    {
+        $this->files[] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Remove files
+     *
+     * @param \CEG\ArticleBundle\Entity\Image $files
+     */
+    public function removeFile(\CEG\ArticleBundle\Entity\Image $files)
+    {
+        $this->files->removeElement($files);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFiles()
+    {
+        return $this->files;
     }
 }

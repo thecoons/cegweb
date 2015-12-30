@@ -15,11 +15,19 @@ class DefaultController extends Controller
 
 
 
-  public function listAction($page)
+  public function listAction($page,$type)
   {
+
     $em    = $this->get('doctrine.orm.entity_manager');
-    $dql   = "SELECT a FROM CEGArticleBundle:Article a ORDER BY a.id DESC";
+    if($type == 'tous'){
+      $dql   = "SELECT a FROM CEGArticleBundle:Article a ORDER BY a.id DESC";
+      $query = $em->createQuery($dql);
+     }
+    else{
+    $dql = "SELECT a FROM CEGArticleBundle:Article a WHERE a.artclType = :type ORDER BY a.id DESC";
     $query = $em->createQuery($dql);
+    $query->setParameter('type',$type);
+    }
 
     $paginator  = $this->get('knp_paginator');
     $pagination = $paginator->paginate(
@@ -54,7 +62,7 @@ public function createArticleAction(Request $request){
     $em->persist($article);
     $em->flush();
 
-    return $this->redirect($this->generateUrl('ceg_article_list', array('page'=>1)));
+    return $this->redirect($this->generateUrl('ceg_article_list', array('page'=>1,'type'=>'tous')));
   }
   return $this->render('CEGArticleBundle:Default:createArticle.html.twig',array('form' => $form->createView() ));
 }
@@ -94,6 +102,6 @@ public function deleteArticleAction($id){
   $em->remove($article);
   $em->flush();
 
-  return $this->redirect($this->generateUrl('ceg_article_list',array('page'=>1)));
+  return $this->redirect($this->generateUrl('ceg_article_list',array('page'=>1,'type'=>'tous')));
 }
 }

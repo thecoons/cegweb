@@ -158,7 +158,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // ceg_article_list
-            if (0 === strpos($pathinfo, '/article/list') && preg_match('#^/article/list/(?P<page>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/article/list') && preg_match('#^/article/list/(?P<page>[^/]++)/(?P<type>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ceg_article_list')), array (  '_controller' => 'CEG\\ArticleBundle\\Controller\\DefaultController::listAction',));
             }
 

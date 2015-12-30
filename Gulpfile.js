@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     less = require('gulp-less'),
-    path = require('path');
-    sass = require('gulp-sass')
+    path = require('path'),
+    sass = require('gulp-sass');
 
 gulp.task('default',['watch']);
 
@@ -11,7 +11,7 @@ gulp.task('sass',function(){
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('src/CEG/ApplicationBundle/Resources/public/css/'));
 
-})
+});
 
 gulp.task('jshint',function () {
   return gulp.src('src/CEG/**/*.js')
