@@ -1,5 +1,5 @@
 set :application, "CEGwebSite"
-set :domain,      "thecoonslab.com"
+set :domain,      "www.escrimegrasse.info"
 set :deploy_to,   "/var/www/#{domain}"
 set :app_path,    "app"
 set :user, "thecoon" # Le nom d’utilisateur du serveur distant
